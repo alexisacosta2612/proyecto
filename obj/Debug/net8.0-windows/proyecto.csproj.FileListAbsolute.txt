@@ -35,3 +35,41 @@ C:\Users\pc1\Desktop\progra II\3r parcial\proyecto\obj\Debug\net8.0-windows\proy
 C:\Users\pc1\Desktop\progra II\3r parcial\proyecto\obj\Debug\net8.0-windows\proyecto.Formadd.resources
 C:\Users\pc1\Desktop\progra II\3r parcial\proyecto\obj\Debug\net8.0-windows\proyecto.Formmod.resources
 C:\Users\pc1\Desktop\progra II\3r parcial\proyecto\obj\Debug\net8.0-windows\proyecto.Formventa.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\proyecto.exe
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\proyecto.deps.json
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\proyecto.runtimeconfig.json
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\proyecto.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\proyecto.pdb
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.csproj.AssemblyReference.cache
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Form1.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Form2.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Formadd.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Formadmin.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Formmod.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Formventa.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.Properties.Resources.resources
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.csproj.GenerateResource.cache
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.AssemblyInfoInputs.cache
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.AssemblyInfo.cs
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.csproj.CoreCompileInputs.cache
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.sourcelink.json
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.csproj.Up2Date
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\refint\proyecto.dll
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.pdb
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\proyecto.genruntimeconfig.cache
+C:\Users\danna\OneDrive\Documentos\Programacion Proyecto\proyecto\obj\Debug\net8.0-windows\ref\proyecto.dll

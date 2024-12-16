@@ -1,4 +1,5 @@
-﻿using proyecto__;
+﻿using iText.Kernel.Pdf;
+using iText.Layout.Element;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,46 +9,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText.Kernel.Pdf;
+using iText.Layout;          // Para la clase Document
+using iText.Layout.Element;
+using System.IO;
 
 namespace proyecto
 {
     public partial class Formventa : Form
     {
-        ProdBD prodDB = new ProdBD();
-        private int indice;
-        List<products> carrito = new List<products>();
+        private string cuenta;
+        List<products> datos;
+        List<products> productosSeleccionados = new List<products>();
+
+        private ArbolProductos arbolPorPrecio = new ArbolProductos(); // Árbol para orden por precio
+        private ArbolProductos arbolPorId = new ArbolProductos();    // Árbol para búsqueda por ID
+
         public Formventa()
         {
             InitializeComponent();
-            indice = 0;
         }
-        public void llenar_tabla()
+
+        public Formventa(string cuenta)
         {
+            InitializeComponent();
+            this.cuenta = cuenta;
 
         }
+
         private void Formventa_Load(object sender, EventArgs e)
         {
-            try
-            {
-                // Consulta los datos
-                List<products> datos = prodDB.consult();
+
+            // Mostrar el nombre del usuario al cargar el formulario
+            Console.WriteLine($"Usuario autenticado: {cuenta}");
+            ProdBD bd = new ProdBD(); // Crear instancia de conexión a la base de datos
+            _ = bd.ObtenerDatosGrafica();
 
 
-                // Vincula la lista al DataGridView
-                dataGridView1.DataSource = datos;
-
-                // Opcional: Ajustar columnas para que se adapten al contenido
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                indice++;
-                if (indice > 7)
-                    indice = 0;
-                lblfoto.ImageIndex = indice;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos en el DataGridView: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            bd.Disconnect();
         }
 
         private void dataGridViewCarrito_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,69 +56,131 @@ namespace proyecto
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            try
+            ProdBD obj = new ProdBD();
+
+            // Obtener productos de la base de datos
+            datos = obj.ObtenerProductos();
+
+            // Insertar productos en el árbol por precio
+            foreach (var producto in datos)
             {
-                StringBuilder compraDetails = new StringBuilder();
-                decimal total = 0;
-
-                // Añadir los productos del carrito al archivo
-                foreach (var producto in carrito)
-                {
-                    compraDetails.AppendLine($"Producto: {producto.Namepicture} - Precio: ${producto.Price}");
-                    total += producto.Price;
-                }
-
-                // Agregar el total al archivo
-                compraDetails.AppendLine($"Total de la compra: ${total}");
-
-                // Guardar el detalle de la compra en un archivo de texto
-                string rutaArchivo = "compra.txt"; // Nombre del archivo donde se guardará la compra
-                System.IO.File.WriteAllText(rutaArchivo, compraDetails.ToString());
-
-                MessageBox.Show("Compra guardada en el archivo 'compra.txt'.", "Compra guardada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                arbolPorPrecio.Insertar(producto, (p1, p2) => p1.Precio < p2.Precio); // Criterio: Precio Ascendente
             }
-            catch (Exception ex)
+
+            // Insertar productos en el árbol por ID
+            foreach (var producto in datos)
             {
-                MessageBox.Show("Error al guardar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                arbolPorId.Insertar(producto, (p1, p2) => p1.Id < p2.Id); // Criterio: ID Ascendente
             }
+
+            MessageBox.Show("Árboles creados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Mostrar productos ordenados por precio en el RichTextBox
+            richTextBox1.Clear();
+            arbolPorPrecio.MostrarEnOrden(richTextBox1);
+
+            obj.Disconnect();
         }
 
         private void btnQuitarDelCarrito_Click(object sender, EventArgs e)
         {
-            if (dataGridViewCarrito.SelectedRows.Count > 0)
-            {
-                // Obtiene el producto seleccionado del carrito
-                int idProducto = Convert.ToInt32(dataGridViewCarrito.SelectedRows[0].Cells["Id"].Value);
-                products productoAEliminar = carrito.FirstOrDefault(p => p.Id == idProducto);
-
-                if (productoAEliminar != null)
-                {
-                    // Elimina el producto del carrito
-                    carrito.Remove(productoAEliminar);
-
-                    // Actualiza el DataGridView del carrito
-                    dataGridViewCarrito.DataSource = null;
-                    dataGridViewCarrito.DataSource = carrito;
-
-                    // Actualiza el total
-                    ActualizarTotal();
-                }
-            }
 
         }
         private void ActualizarTotal()
         {
-            decimal total = carrito.Sum(p => p.Price);  // Calcula la suma de los precios de los productos en el carrito
-            lblTotal.Text = "Total: $" + total.ToString("0.00");
+         
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView1.SelectedCells[0].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedCells[1].Value.ToString();
-            textBox3.Text = dataGridView1.SelectedCells[2].Value.ToString();
-            textBox4.Text = dataGridView1.SelectedCells[3].Value.ToString();
-            textBox5.Text = dataGridView1.SelectedCells[4].Value.ToString();
+        }
+
+        private void lblTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Método para generar el PDF
+        private void GenerarPDF(string contenido)
+        {
+
+            string rutaPDF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "compra.pdf");
+
+            try
+            {
+                // Verificar si hay productos seleccionados
+                if (productosSeleccionados.Count == 0)
+                {
+                    MessageBox.Show("No hay productos para generar el PDF.");
+                    return;
+                }
+
+                // Crear el escritor de PDF
+                using (PdfWriter writer = new PdfWriter(rutaPDF))
+                using (PdfDocument pdf = new PdfDocument(writer))
+                using (Document documento = new Document(pdf))
+                {
+                    // Agregar contenido
+                    documento.Add(new Paragraph("Nota de compra:"));
+                    documento.Add(new Paragraph($"Fecha: {DateTime.Now}"));
+                    documento.Add(new Paragraph("Productos adquiridos:"));
+
+                    foreach (var producto in productosSeleccionados)
+                    {
+                        if (producto != null)
+                        {
+                            documento.Add(new Paragraph($"- {producto.Descripcion}, Cantidad: {producto.Cantidad}, Precio: {producto.Precio}"));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Un producto tiene valores nulos. No se incluirá en el PDF.");
+                        }
+                    }
+
+                    // Calcular el total
+                    decimal total = (decimal)productosSeleccionados.Sum(p => p.Precio * p.Cantidad);
+                    documento.Add(new Paragraph($"Total: {total}"));
+
+                    documento.Close();
+                    MessageBox.Show($"PDF generado correctamente en {rutaPDF}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al generar PDF: {ex.Message}");
+
+            }
+
+        }
+
+        private void buttonPagar_Click(object sender, EventArgs e)
+        {
+            if (productosSeleccionados.Count == 0)
+            {
+                MessageBox.Show("No has agregado productos.");
+                return;
+            }
+
+            // Crear una instancia de la clase BaseDatos para obtener el nombre del usuario
+            ProdBD db = new ProdBD();
+            string nombreUsuario = db.ObtenerNombreUsuario(cuenta); // Aquí "cuenta" es el número de cuenta actual
+
+            StringBuilder notaCompra = new StringBuilder();
+            notaCompra.AppendLine($"Usuario: {nombreUsuario}");
+            notaCompra.AppendLine($"Fecha: {DateTime.Now}");
+            notaCompra.AppendLine("Detalle de la compra:");
+
+            decimal totalCompra = 0;
+            foreach (var producto in productosSeleccionados)
+            {
+                decimal subtotal = (decimal)(producto.Precio * producto.Cantidad);
+                totalCompra += subtotal;
+                notaCompra.AppendLine($"{producto.Descripcion} - {producto.Precio} x {producto.Cantidad} = {subtotal}");
+            }
+
+            notaCompra.AppendLine($"Total: {totalCompra}");
+            richTextBox2.Text = notaCompra.ToString();
+            GenerarPDF(notaCompra.ToString());
         }
     }
 }

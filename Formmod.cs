@@ -64,5 +64,10 @@ namespace proyecto
             obj.Disconnect();
 
         }
+
+        private void Formmod_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

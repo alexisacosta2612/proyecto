@@ -30,45 +30,43 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formventa));
-            panel1 = new Panel();
+            txtProd = new TextBox();
+            txtCantidad = new TextBox();
             lblfoto = new Label();
             imglfotos = new ImageList(components);
-            dataGridView1 = new DataGridView();
-            dataGridViewCarrito = new DataGridView();
-            btnAgregarCarrito = new Button();
-            btnQuitarDelCarrito = new Button();
-            lblTotal = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewCarrito).BeginInit();
+            buttonVer = new Button();
+            buttonAgregar = new Button();
+            label1 = new Label();
+            buttonPagar = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            richTextBox1 = new RichTextBox();
+            richTextBox2 = new RichTextBox();
             SuspendLayout();
             // 
-            // panel1
+            // txtProd
             // 
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(lblfoto);
-            panel1.Location = new Point(3, -1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(224, 483);
-            panel1.TabIndex = 10;
+            txtProd.Location = new Point(171, 234);
+            txtProd.Name = "txtProd";
+            txtProd.Size = new Size(75, 23);
+            txtProd.TabIndex = 18;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(171, 263);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(75, 23);
+            txtCantidad.TabIndex = 20;
             // 
             // lblfoto
             // 
+            lblfoto.BackColor = Color.Transparent;
             lblfoto.ImageList = imglfotos;
-            lblfoto.Location = new Point(76, 10);
+            lblfoto.Location = new Point(130, 237);
             lblfoto.Name = "lblfoto";
-            lblfoto.Size = new Size(100, 96);
+            lblfoto.Size = new Size(35, 21);
             lblfoto.TabIndex = 12;
-            lblfoto.Text = "label1";
+            lblfoto.Text = "ID ->";
             // 
             // imglfotos
             // 
@@ -82,123 +80,127 @@
             imglfotos.Images.SetKeyName(4, "pants.jpg");
             imglfotos.Images.SetKeyName(5, "playera.jpg");
             // 
-            // dataGridView1
+            // buttonVer
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(244, 46);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(360, 182);
-            dataGridView1.TabIndex = 11;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            buttonVer.BackColor = SystemColors.ControlDarkDark;
+            buttonVer.Location = new Point(12, 292);
+            buttonVer.Name = "buttonVer";
+            buttonVer.Size = new Size(105, 23);
+            buttonVer.TabIndex = 13;
+            buttonVer.Text = "Ver Productos";
+            buttonVer.UseVisualStyleBackColor = false;
+            buttonVer.Click += btnAgregarCarrito_Click;
             // 
-            // dataGridViewCarrito
+            // buttonAgregar
             // 
-            dataGridViewCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCarrito.Location = new Point(655, 46);
-            dataGridViewCarrito.Name = "dataGridViewCarrito";
-            dataGridViewCarrito.Size = new Size(373, 182);
-            dataGridViewCarrito.TabIndex = 12;
-            dataGridViewCarrito.CellContentClick += dataGridViewCarrito_CellContentClick;
+            buttonAgregar.BackColor = SystemColors.ControlDarkDark;
+            buttonAgregar.Location = new Point(151, 292);
+            buttonAgregar.Name = "buttonAgregar";
+            buttonAgregar.Size = new Size(109, 23);
+            buttonAgregar.TabIndex = 14;
+            buttonAgregar.Text = "Agregar Producto";
+            buttonAgregar.UseVisualStyleBackColor = false;
+            buttonAgregar.Click += btnQuitarDelCarrito_Click;
             // 
-            // btnAgregarCarrito
+            // label1
             // 
-            btnAgregarCarrito.Location = new Point(655, 283);
-            btnAgregarCarrito.Name = "btnAgregarCarrito";
-            btnAgregarCarrito.Size = new Size(75, 23);
-            btnAgregarCarrito.TabIndex = 13;
-            btnAgregarCarrito.Text = "button1";
-            btnAgregarCarrito.UseVisualStyleBackColor = true;
-            btnAgregarCarrito.Click += btnAgregarCarrito_Click;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(82, 266);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 15);
+            label1.TabIndex = 21;
+            label1.Text = "Contraseña ->";
             // 
-            // btnQuitarDelCarrito
+            // buttonPagar
             // 
-            btnQuitarDelCarrito.Location = new Point(795, 282);
-            btnQuitarDelCarrito.Name = "btnQuitarDelCarrito";
-            btnQuitarDelCarrito.Size = new Size(75, 23);
-            btnQuitarDelCarrito.TabIndex = 14;
-            btnQuitarDelCarrito.Text = "button2";
-            btnQuitarDelCarrito.UseVisualStyleBackColor = true;
-            btnQuitarDelCarrito.Click += btnQuitarDelCarrito_Click;
+            buttonPagar.BackColor = SystemColors.ControlDarkDark;
+            buttonPagar.Location = new Point(323, 292);
+            buttonPagar.Name = "buttonPagar";
+            buttonPagar.Size = new Size(75, 23);
+            buttonPagar.TabIndex = 22;
+            buttonPagar.Text = "Pagar";
+            buttonPagar.UseVisualStyleBackColor = false;
+            buttonPagar.Click += buttonPagar_Click;
             // 
-            // lblTotal
+            // label2
             // 
-            lblTotal.Location = new Point(876, 283);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(100, 23);
-            lblTotal.TabIndex = 15;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Historic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(73, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(238, 20);
+            label2.TabIndex = 23;
+            label2.Text = "Productos de la base de datos";
             // 
-            // textBox1
+            // label3
             // 
-            textBox1.Location = new Point(50, 251);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 16;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Emoji", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(548, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(158, 20);
+            label3.TabIndex = 24;
+            label3.Text = "Productos añadidos";
             // 
-            // textBox2
+            // richTextBox1
             // 
-            textBox2.Location = new Point(50, 222);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 17;
+            richTextBox1.BackColor = Color.SlateGray;
+            richTextBox1.Location = new Point(12, 48);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(386, 166);
+            richTextBox1.TabIndex = 25;
+            richTextBox1.Text = "";
             // 
-            // textBox3
+            // richTextBox2
             // 
-            textBox3.Location = new Point(50, 193);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(50, 164);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(50, 135);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 20;
+            richTextBox2.BackColor = Color.LightSlateGray;
+            richTextBox2.Location = new Point(440, 48);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(371, 166);
+            richTextBox2.TabIndex = 26;
+            richTextBox2.Text = "";
             // 
             // Formventa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1061, 481);
-            Controls.Add(lblTotal);
-            Controls.Add(btnQuitarDelCarrito);
-            Controls.Add(btnAgregarCarrito);
-            Controls.Add(dataGridViewCarrito);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel1);
+            BackColor = Color.Beige;
+            ClientSize = new Size(848, 363);
+            Controls.Add(richTextBox2);
+            Controls.Add(richTextBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(buttonPagar);
+            Controls.Add(label1);
+            Controls.Add(buttonAgregar);
+            Controls.Add(txtProd);
+            Controls.Add(buttonVer);
+            Controls.Add(txtCantidad);
+            Controls.Add(lblfoto);
             Name = "Formventa";
             Text = "Formventa";
             Load += Formventa_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewCarrito).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Panel panel1;
-        private DataGridView dataGridView1;
         private ImageList imglfotos;
         private Label lblfoto;
-        private DataGridView dataGridViewCarrito;
-        private Button btnAgregarCarrito;
-        private Button btnQuitarDelCarrito;
-        private TextBox lblTotal;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private Button buttonVer;
+        private Button buttonAgregar;
+        private TextBox txtProd;
+        private TextBox txtCantidad;
+        private Label label1;
+        private Button buttonPagar;
+        private Label label2;
+        private Label label3;
+        private RichTextBox richTextBox1;
+        private RichTextBox richTextBox2;
     }
 }

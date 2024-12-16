@@ -26,7 +26,22 @@ namespace proyecto
 
 
         }
-      
+
+        // Nodo para Árbol Binario de Búsqueda(ABB)
+        public class NodoProducto
+        {
+            public products Producto { get; set; }
+            public NodoProducto Izquierdo { get; set; }
+            public NodoProducto Derecho { get; set; }
+
+            public NodoProducto(products producto)
+            {
+                Producto = producto;
+                Izquierdo = null;
+                Derecho = null;
+            }
+        }
+
 
         public int Id { get => id; set => id = value; }
         public string Namepicture { get => namepicture; set => namepicture = value; }

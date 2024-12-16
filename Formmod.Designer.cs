@@ -144,6 +144,7 @@
             Controls.Add(textBoxmodid);
             Name = "Formmod";
             Text = "Formmod";
+            Load += Formmod_Load;
             ResumeLayout(false);
             PerformLayout();
         }
