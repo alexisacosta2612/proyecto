@@ -10,6 +10,7 @@ using Mysqlx.Crud;
 using Microsoft.VisualBasic;
 using System.Windows.Forms;
 using proyecto;
+using Microsoft.VisualBasic.Devices;
 
 namespace proyecto
 {
@@ -45,6 +46,57 @@ namespace proyecto
                 MessageBox.Show("Conexión cerrada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        public int obtenerStock(int id)
+{
+    int stock = 0;
+    try
+    {
+        string query = "SELECT stock FROM inventario WHERE id = @id";
+        using (MySqlCommand cmd = new MySqlCommand(query, connection))
+        {
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                stock = reader.GetInt32("stock");
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"Error al obtener el stock del producto: {ex.Message}");
+    }
+    return stock;
+}
+        /// <summary>
+        /// //
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        public int obtenerTotalProductos()
+        {
+            int total = 0;
+            try
+            {
+                string query = "SELECT COUNT(*) FROM inventario";  // Contamos todos los productos
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    total = Convert.ToInt32(cmd.ExecuteScalar());  // Ejecutamos la consulta y obtenemos el resultado
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el total de productos: {ex.Message}");
+            }
+            return total;
+        }
+
         public List<products> consult()
         {
             List<products> data = new List<products>();
@@ -105,6 +157,30 @@ namespace proyecto
             {
                 MessageBox.Show("Error en la actualizacion: " + ex.Message);
                 this.Disconnect();
+            }
+        }
+        /// <summary>
+        /// ///////
+        /// </summary>
+        //////////////////////////////////////////////////
+        ///
+        public void Actualizarstock(int idproduct,int cantidadcomprada)
+        {
+            try
+            {
+                string query = "UPDATE inventario SET stock=stock -@cantidad WHERE id =@idproducto";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@cantidad", cantidadcomprada);
+                    cmd.Parameters.AddWithValue("@idProducto", idproduct);
+
+                   
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar el stock: {ex.Message}");
             }
         }
         public void eliminar(int idp)
@@ -186,13 +262,13 @@ namespace proyecto
         }
 
         //-----------------------------------------------------METODOS AGREGADOS ------------------------------------------
-        public string ObtenerNombreUsuario(string numeroCuenta)
+      /*  public string ObtenerNombreUsuario(string numeroCuenta)
         {
             string nombreUsuario = "Desconocido"; // Valor predeterminado en caso de no encontrar el usuario
             try
             {
                 // Consulta SQL ajustada para usar "nombre completo" como el nombre de la columna
-                string query = "SELECT `nombre completo` FROM registros WHERE cuenta = @numeroCuenta";
+                string query = "SELECT `nombre` FROM usuarios WHERE cuenta = @numeroCuenta";
 
                 Connecti2(); // Asegúrate de conectar antes de ejecutar la consulta
 
@@ -219,7 +295,7 @@ namespace proyecto
             }
 
             return nombreUsuario;
-        }
+        */
 
         public List<products> ObtenerProductos()
         {
@@ -322,7 +398,7 @@ namespace proyecto
 
         public void Connect()
             {
-                string cadena = "Server=localhost; Port=33065; Database=products; User=root; Password=; SslMode=none;";
+                string cadena = "Server=localhost; Database=products; User=root; Password=; SslMode=none;";
                 try
                 {
                     connection = new MySqlConnection(cadena);
@@ -338,7 +414,7 @@ namespace proyecto
         public void Connecti2()
         {
             //Datos especiales para hacer la conexion a el servidor de datos
-            string cadena2 = "Server=localhost; Port=33065;Database=usuarios; User=root; Password=; SslMode=none;";
+            string cadena2 = "Server=localhost;Database=registros; User=root; Password=; SslMode=none;";
             try
             {
                 connection2 = new MySqlConnection(cadena2);
@@ -347,9 +423,10 @@ namespace proyecto
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al conectar con la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al conectar con la base de datosss: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
 

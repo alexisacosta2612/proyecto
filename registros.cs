@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,5 +35,6 @@ namespace proyecto
         public string Cuenta { get => cuenta; set => cuenta = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
         public int Monto { get => monto; set => monto = value; }
+        public string Cuentacpy { get; internal set; }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             buttonRefrescar = new Button();
             textBoxiddelete = new TextBox();
             buttondelete = new Button();
@@ -37,12 +38,18 @@
             richTextBox2 = new RichTextBox();
             button1morestock = new Button();
             panel1 = new Panel();
+            button4 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             button2 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
+            button3 = new Button();
+            textBoxtotalvntas = new TextBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            labelhora = new Label();
+            labelfecha = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -69,7 +76,7 @@
             textBoxiddelete.BackColor = Color.FromArgb(37, 42, 74);
             textBoxiddelete.BorderStyle = BorderStyle.None;
             textBoxiddelete.ForeColor = Color.Cyan;
-            textBoxiddelete.Location = new Point(26, 300);
+            textBoxiddelete.Location = new Point(26, 261);
             textBoxiddelete.Multiline = true;
             textBoxiddelete.Name = "textBoxiddelete";
             textBoxiddelete.PlaceholderText = "ID A ELIMINAR:";
@@ -82,7 +89,7 @@
             buttondelete.FlatStyle = FlatStyle.Flat;
             buttondelete.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttondelete.ForeColor = Color.Red;
-            buttondelete.Location = new Point(26, 359);
+            buttondelete.Location = new Point(26, 310);
             buttondelete.Name = "buttondelete";
             buttondelete.Size = new Size(147, 47);
             buttondelete.TabIndex = 32;
@@ -108,7 +115,7 @@
             buttonAGREGAR.FlatStyle = FlatStyle.Popup;
             buttonAGREGAR.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonAGREGAR.ForeColor = Color.Cyan;
-            buttonAGREGAR.Location = new Point(26, 233);
+            buttonAGREGAR.Location = new Point(26, 208);
             buttonAGREGAR.Name = "buttonAGREGAR";
             buttonAGREGAR.Size = new Size(147, 47);
             buttonAGREGAR.TabIndex = 33;
@@ -121,7 +128,7 @@
             buttonMODIFICAR.FlatStyle = FlatStyle.Popup;
             buttonMODIFICAR.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonMODIFICAR.ForeColor = Color.Cyan;
-            buttonMODIFICAR.Location = new Point(26, 180);
+            buttonMODIFICAR.Location = new Point(26, 155);
             buttonMODIFICAR.Name = "buttonMODIFICAR";
             buttonMODIFICAR.Size = new Size(147, 47);
             buttonMODIFICAR.TabIndex = 34;
@@ -156,6 +163,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(24, 30, 54);
+            panel1.Controls.Add(button4);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(button2);
@@ -169,14 +177,27 @@
             panel1.Size = new Size(200, 516);
             panel1.TabIndex = 37;
             // 
+            // button4
+            // 
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.PaleGoldenrod;
+            button4.Location = new Point(0, 421);
+            button4.Name = "button4";
+            button4.Size = new Size(191, 53);
+            button4.TabIndex = 37;
+            button4.Text = "PANTALLA DE VENTAS";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Cyan;
-            button1.Location = new Point(26, 412);
+            button1.Location = new Point(3, 362);
             button1.Name = "button1";
-            button1.Size = new Size(147, 80);
+            button1.Size = new Size(191, 53);
             button1.TabIndex = 36;
             button1.Text = "REGRESAR A LA PANTALLA PRINCIPAL";
             button1.UseVisualStyleBackColor = true;
@@ -238,12 +259,70 @@
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
             // 
+            // button3
+            // 
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Cyan;
+            button3.Location = new Point(575, 344);
+            button3.Name = "button3";
+            button3.Size = new Size(202, 47);
+            button3.TabIndex = 38;
+            button3.Text = "TOTAL DE VENTAS";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // textBoxtotalvntas
+            // 
+            textBoxtotalvntas.AccessibleName = "";
+            textBoxtotalvntas.BackColor = Color.FromArgb(37, 42, 74);
+            textBoxtotalvntas.BorderStyle = BorderStyle.None;
+            textBoxtotalvntas.ForeColor = Color.Cyan;
+            textBoxtotalvntas.Location = new Point(809, 348);
+            textBoxtotalvntas.Multiline = true;
+            textBoxtotalvntas.Name = "textBoxtotalvntas";
+            textBoxtotalvntas.PlaceholderText = "TOTAL DE VENTAS:";
+            textBoxtotalvntas.Size = new Size(147, 43);
+            textBoxtotalvntas.TabIndex = 39;
+            textBoxtotalvntas.TextChanged += textBoxtotalvntas_TextChanged;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
+            // labelhora
+            // 
+            labelhora.AutoSize = true;
+            labelhora.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelhora.ForeColor = Color.Cyan;
+            labelhora.Location = new Point(872, 394);
+            labelhora.Name = "labelhora";
+            labelhora.Size = new Size(52, 21);
+            labelhora.TabIndex = 40;
+            labelhora.Text = "label1";
+            // 
+            // labelfecha
+            // 
+            labelfecha.AutoSize = true;
+            labelfecha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelfecha.ForeColor = Color.Cyan;
+            labelfecha.Location = new Point(872, 429);
+            labelfecha.Name = "labelfecha";
+            labelfecha.Size = new Size(52, 21);
+            labelfecha.TabIndex = 41;
+            labelfecha.Text = "label2";
+            // 
             // Formadmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(1256, 560);
+            Controls.Add(labelfecha);
+            Controls.Add(labelhora);
+            Controls.Add(textBoxtotalvntas);
+            Controls.Add(button3);
             Controls.Add(panel1);
             Controls.Add(button1morestock);
             Controls.Add(richTextBox2);
@@ -259,6 +338,7 @@
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -277,5 +357,11 @@
         private Button button1;
         private Panel panel3;
         private PictureBox pictureBox2;
+        private Button button3;
+        private TextBox textBoxtotalvntas;
+        private System.Windows.Forms.Timer timer1;
+        private Label labelhora;
+        private Label labelfecha;
+        private Button button4;
     }
 }

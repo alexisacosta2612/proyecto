@@ -30,7 +30,8 @@ namespace proyecto
 
             string cuenta = textBoxcuenta.Text; // Campo de cuenta
             string contraseña = textBoxcontraseña.Text; // Campo de contraseña
-           
+            string cuentacpy = "";
+
 
             try
             {
@@ -44,6 +45,8 @@ namespace proyecto
 
                     string dbCuenta = reader.GetString("cuenta"); // Obtén la cuenta desde la base de datos
 
+                    cuentacpy = cuenta;
+
                     reader.Read(); // Lee la primera fila (ya que debería ser única)
                     int usuarioId = reader.GetInt32("id"); // Obtén el ID del usuario desde la base de datos
 
@@ -51,26 +54,28 @@ namespace proyecto
                     MessageBox.Show($"Usuario activo ID: {AdmonBD.UsuarioActivoId}");
 
                     // Mensaje de depuración para ver los valores
-                  //  MessageBox.Show("Cuenta desde la base de datos: " + dbCuenta);
+                    //  MessageBox.Show("Cuenta desde la base de datos: " + dbCuenta);
                     MessageBox.Show("Cuenta ingresada: " + cuenta);
 
                     reader.Close(); // Cierra el reader después de leer los datos
 
                     if (dbCuenta.Equals("goku@gmail.com", StringComparison.OrdinalIgnoreCase)) // Compara insensiblemente a mayúsculas
                     {
+
+                        // this.Hide(); // Ocultar este formulario
                         MessageBox.Show("Abriendo Formadmin...");
                         Formadmin formadmin = new Formadmin();
                         formadmin.Show(); // Mostrar Formadmin
-                        
-                        
-                        
+
+
+
                     }
                     else
                     {
                         MessageBox.Show("Abriendo Formventa...");
                         Formventa form3 = new Formventa(); // Formulario para otros usuarios
                         form3.Show();
-                       // this.Hide(); // Ocultar este formulario
+                        // this.Hide(); // Ocultar este formulario
                     }
                 }
                 else
@@ -93,7 +98,14 @@ namespace proyecto
 
         private void buttonloggout_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\proyecto.csproj": {}
+    "C:\\Users\\pc1\\Downloads\\proyecto-main\\proyecto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\proyecto.csproj": {
+    "C:\\Users\\pc1\\Downloads\\proyecto-main\\proyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\proyecto.csproj",
+        "projectUniqueName": "C:\\Users\\pc1\\Downloads\\proyecto-main\\proyecto.csproj",
         "projectName": "proyecto",
-        "projectPath": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\proyecto.csproj",
-        "packagesPath": "C:\\Users\\Luis Donaldo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\obj\\",
+        "projectPath": "C:\\Users\\pc1\\Downloads\\proyecto-main\\proyecto.csproj",
+        "packagesPath": "C:\\Users\\pc1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc1\\Downloads\\proyecto-main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis Donaldo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

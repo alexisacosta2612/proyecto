@@ -35,6 +35,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             buttonloggout = new Button();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Nirmala UI Semilight", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(260, 195);
+            label2.Location = new Point(257, 165);
             label2.Name = "label2";
             label2.Size = new Size(282, 32);
             label2.TabIndex = 10;
@@ -83,7 +84,7 @@
             // 
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Image = Properties.Resources.LOGO_CHIQUITO;
-            pictureBox1.Location = new Point(280, 65);
+            pictureBox1.Location = new Point(280, 62);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(240, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -94,7 +95,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(297, 12);
+            label1.Location = new Point(298, 9);
             label1.Name = "label1";
             label1.Size = new Size(203, 50);
             label1.TabIndex = 8;
@@ -113,12 +114,24 @@
             buttonloggout.UseVisualStyleBackColor = false;
             buttonloggout.Click += buttonloggout_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Nirmala UI Semilight", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(201, 207);
+            label3.Name = "label3";
+            label3.Size = new Size(412, 32);
+            label3.TabIndex = 16;
+            label3.Text = "BIENVENIDOS AL SISTEMA MERCURIO";
+            label3.Click += label3_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
             Controls.Add(buttonloggout);
             Controls.Add(buttonlogin);
             Controls.Add(textBoxcontraseña);
@@ -144,5 +157,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button buttonloggout;
+        private Label label3;
     }
 }

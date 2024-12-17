@@ -34,6 +34,15 @@ namespace proyecto
         {
 
         }
+        private string correoUsuario;
+        public Formadmin(string correo)
+        {
+            InitializeComponent();
+            correoUsuario = correo;
+
+            // Ahora puedes usar correoUsuario como clave o hacer las validaciones necesarias
+            MessageBox.Show($"Bienvenido al panel de administrador. Correo: {correoUsuario}");
+        }
 
         private void buttonRefrescar_Click(object sender, EventArgs e)
         {
@@ -93,6 +102,18 @@ namespace proyecto
 
         private void buttondelete_Click_1(object sender, EventArgs e)
         {
+            ProdBD obj = new ProdBD();
+            int totalProductos = obj.obtenerTotalProductos();  // Método que debes crear para obtener el número total de productos
+
+            // Si el número de productos es menor o igual a 6, no permitir la eliminación
+            if (totalProductos <= 6)
+            {
+                MessageBox.Show("No se puede eliminar el producto, ya que hay 6 o menos productos en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;  // Detener la eliminación
+            }
+
+            int id = Convert.ToInt32(textBoxiddelete.Text); // ID tomado del campo de texto
+
 
             // Mostrar un cuadro de diálogo de confirmación
             DialogResult resultado = MessageBox.Show(
@@ -106,8 +127,7 @@ namespace proyecto
             if (resultado == DialogResult.Yes)
             {
                 // Lógica para eliminar el registro
-                int id = Convert.ToInt32(textBoxiddelete.Text); // ID tomado del campo de texto
-                ProdBD obj = new ProdBD();
+
                 obj.eliminar(id);
                 obj.Disconnect();
                 MessageBox.Show("Registro eliminado exitosamente.");
@@ -220,16 +240,16 @@ namespace proyecto
         {
             AdmonBD admonBD = new AdmonBD();
 
-           int usuarioact= admonBD.usuarioact;
+            int usuarioact = admonBD.usuarioact;
             registros usuarioactivo = admonBD.const_reguser(usuarioact);
 
             if (usuarioactivo != null)
             {
                 MessageBox.Show($"Usuario Activo:\n" +
-                    //   $"ID: {usuarioactivo.Id}\n" +
-                       $"Nombre: {usuarioactivo.Name}" ,
-                      // $"Cuenta: {usuarioactivo.Cuenta}\n" +
-                     //  $"Monto: {usuarioactivo.Monto}",
+                       //   $"ID: {usuarioactivo.Id}\n" +
+                       $"Nombre: {usuarioactivo.Name}",
+                       // $"Cuenta: {usuarioactivo.Cuenta}\n" +
+                       //  $"Monto: {usuarioactivo.Monto}",
                        "Usuario Act",
                        MessageBoxButtons.OK,
                        MessageBoxIcon.Information);
@@ -245,7 +265,7 @@ namespace proyecto
         {
             try
             {
-              
+
 
                 MessageBox.Show("Compra realizada con éxito.");
             }
@@ -259,6 +279,36 @@ namespace proyecto
         {
             GuardarCompra();
         }
+        private decimal totalVentas = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Mostrar el total acumulado en el TextBox correspondiente
+                textBoxtotalvntas.Text = $"${totalVentas:0.00}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular el total de ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelhora.Text = DateTime.Now.ToShortTimeString();
+            labelfecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Formventa fmventa = new Formventa();
+            fmventa.ShowDialog();
+            this.Hide();
+        }
+
+        private void textBoxtotalvntas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

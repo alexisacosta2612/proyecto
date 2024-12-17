@@ -78,7 +78,39 @@ namespace proyecto__
             }
             return data;
         }
-        //...
+        /// <summary>
+        /// ////////////////////////////////////////////////////////////
+        /// </summary>
+        /// 
+        public string ObtenerCorreoUsuario(string cuenta)
+        {
+            string correo = string.Empty;
+            try
+            {
+                string query = "SELECT cuenta FROM usuarios WHERE cuenta = @cuenta";  // Aqui ajustas el query segun tu base de datos
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@cuenta", cuenta);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        correo = reader.GetString("correo");  // Asegúrate de que el nombre del campo sea correcto
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener correo: {ex.Message}");
+            }
+            return correo;
+        }
+/// <summary>
+/// ////////
+/// </summary>
+/// <param name="numeroCuenta"></param>
+/// <returns></returns>
+      
 
         public registros const_reguser(int idp)
         {
@@ -116,18 +148,51 @@ namespace proyecto__
 
         }
         //...........................
-       
+        public string ObtenerNombreUsuario(string numeroCuenta)
+        {
+            string nombreUsuario = "Desconocido"; // Valor predeterminado en caso de no encontrar el usuario
+            try
+            {
+                // Consulta SQL ajustada para usar "nombre completo" como el nombre de la columna
+                string query = "SELECT nombre FROM usuarios WHERE cuenta = @cuenta";
+
+                Connect(); // Asegúrate de conectar antes de ejecutar la consulta
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Parámetro seguro para evitar inyecciones SQL
+                    command.Parameters.AddWithValue("@cuenta", numeroCuenta);
+
+                    // Ejecutar la consulta
+                    object resultado = command.ExecuteScalar();
+                    if (resultado != null)
+                    {
+                        nombreUsuario = resultado.ToString(); // Convertir el resultado al nombre del usuario
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el nombre del usuario: {ex.Message}");
+            }
+            finally
+            {
+                Disconnect(); // Asegúrate de cerrar la conexión
+            }
+
+            return nombreUsuario;
+        }
         /// <summary>
         /// //////////////////////////////////////
         /// </summary>
         public void Connect()
         {
-            string cadena = "Server=localhost; Port=33065; Database=registros; User=root; Password=; SslMode=none;";
+            string cadena = "Server=localhost; Database=registros; User=root; Password=; SslMode=none;";
             try
             {
                 connection = new MySqlConnection(cadena);
                 connection.Open();
-                MessageBox.Show("Conexión establecida exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Conexión establecida exitosamente.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

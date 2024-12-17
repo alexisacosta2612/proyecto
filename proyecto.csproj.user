@@ -10,13 +10,16 @@
     <Compile Update="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formaux.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormGrafica.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formadd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Formadmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formmod.cs">

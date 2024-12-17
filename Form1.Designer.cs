@@ -33,7 +33,6 @@
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -41,18 +40,22 @@
             label11 = new Label();
             pictureBox1 = new PictureBox();
             button1 = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // buttonfrom2
             // 
             buttonfrom2.AutoEllipsis = true;
-            buttonfrom2.BackColor = Color.White;
-            buttonfrom2.BackgroundImage = Properties.Resources.UAA_LOGO__2_;
-            buttonfrom2.Location = new Point(317, 70);
+            buttonfrom2.BackColor = Color.Beige;
+            buttonfrom2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonfrom2.ForeColor = Color.RoyalBlue;
+            buttonfrom2.Location = new Point(342, 555);
             buttonfrom2.Name = "buttonfrom2";
-            buttonfrom2.Size = new Size(253, 108);
+            buttonfrom2.Size = new Size(207, 65);
             buttonfrom2.TabIndex = 19;
+            buttonfrom2.Text = "PAGINA DE ACCESO";
             buttonfrom2.UseVisualStyleBackColor = false;
             buttonfrom2.Click += buttonfrom2_Click;
             // 
@@ -83,34 +86,23 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(412, 477);
+            label7.Location = new Point(253, 457);
             label7.Name = "label7";
-            label7.Size = new Size(59, 22);
+            label7.Size = new Size(362, 22);
             label7.TabIndex = 16;
-            label7.Text = "label7";
+            label7.Text = "LUIS DONALDO CAMARILLO MEDINA";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(412, 432);
+            label6.Location = new Point(287, 392);
             label6.Name = "label6";
-            label6.Size = new Size(59, 22);
+            label6.Size = new Size(315, 22);
             label6.TabIndex = 15;
-            label6.Text = "label6";
+            label6.Text = "DANNA MAJHLI AVALOS SANTOS";
             label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(412, 389);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 22);
-            label5.TabIndex = 14;
-            label5.Text = "label5";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -184,7 +176,7 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
             button1.Font = new Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(853, 21);
+            button1.Location = new Point(854, 21);
             button1.Name = "button1";
             button1.Size = new Size(34, 35);
             button1.TabIndex = 23;
@@ -192,12 +184,24 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox2.Image = Properties.Resources.UAA_LOGO__2_;
+            pictureBox2.Location = new Point(317, 21);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(264, 114);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(918, 749);
+            Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(label11);
@@ -207,7 +211,6 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -217,6 +220,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,7 +232,6 @@
         private Label label8;
         private Label label7;
         private Label label6;
-        private Label label5;
         private Label label4;
         private Label label2;
         private Label label1;
@@ -236,5 +239,6 @@
         private Label label11;
         private PictureBox pictureBox1;
         private Button button1;
+        private PictureBox pictureBox2;
     }
 }
