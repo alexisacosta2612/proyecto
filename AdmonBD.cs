@@ -122,7 +122,7 @@ namespace proyecto__
         /// </summary>
         public void Connect()
         {
-            string cadena = "Server=localhost; Database=registros; User=root; Password=; SslMode=none;";
+            string cadena = "Server=localhost; Port=33065; Database=registros; User=root; Password=; SslMode=none;";
             try
             {
                 connection = new MySqlConnection(cadena);

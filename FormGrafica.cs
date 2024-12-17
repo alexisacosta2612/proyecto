@@ -40,7 +40,7 @@ namespace proyecto
             return productosOrdenados;
         }
 
-        private void FormGrafica_Load(object sender, EventArgs e)
+       /* private void FormGrafica_Load(object sender, EventArgs e)
         {
             ProdBD bd = new ProdBD();
             // Obtener los productos ordenados por existencias
@@ -55,14 +55,14 @@ namespace proyecto
             chartProductos.ChartAreas[0].AxisX.Title = "Productos";
             chartProductos.ChartAreas[0].AxisY.Title = "Existencias";
 
-            // Llenar los datos en la gráfica con los productos ordenados
+           /* // Llenar los datos en la gráfica con los productos ordenados
             foreach (var producto in productosOrdenados)
             {
                 chartProductos.Series["Existencias"].Points.AddXY(producto.Key, producto.Value.Item1); // Key = descripción, Value.Item1 = existencias
             }
 
             bd.Disconnect();
-        }
+        }*/
 
         private void CambiarDeFormulario()
         {
@@ -76,20 +76,20 @@ namespace proyecto
             CambiarDeFormulario();
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
-        {
+       // private void buttonActualizar_Click(object sender, EventArgs e)
+       // {
             // Obtener los productos ordenados por existencias
-            var productosOrdenados = ObtenerProductosOrdenados();
+         //   var productosOrdenados = ObtenerProductosOrdenados();
 
             // Limpiar el gráfico
-            chartProductos.Series.Clear();
+         //   chartProductos.Series.Clear();
 
             // Agregar una nueva serie con los productos ordenados
-            var serie = chartProductos.Series.Add("Productos");
-            serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+           // var serie = chartProductos.Series.Add("Productos");
+            //serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
 
             // Llenar los puntos de la gráfica con los productos ordenados
-            foreach (var producto in productosOrdenados)
+         /*   foreach (var producto in productosOrdenados)
             {
                 serie.Points.AddXY(producto.Key, producto.Value.Item1);
             }
@@ -97,6 +97,6 @@ namespace proyecto
             // Desconectar la base de datos
             ProdBD obj = new ProdBD();
             obj.Disconnect();
-        }
+        }*/
     }
 }

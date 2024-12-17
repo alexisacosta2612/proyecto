@@ -50,6 +50,7 @@
             txtProd.Name = "txtProd";
             txtProd.Size = new Size(75, 23);
             txtProd.TabIndex = 18;
+            txtProd.TextChanged += txtProd_TextChanged;
             // 
             // txtCantidad
             // 
@@ -57,6 +58,7 @@
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(75, 23);
             txtCantidad.TabIndex = 20;
+            txtCantidad.TextChanged += txtCantidad_TextChanged;
             // 
             // lblfoto
             // 
@@ -108,9 +110,9 @@
             label1.BackColor = Color.Transparent;
             label1.Location = new Point(82, 266);
             label1.Name = "label1";
-            label1.Size = new Size(83, 15);
+            label1.Size = new Size(81, 15);
             label1.TabIndex = 21;
-            label1.Text = "Contraseña ->";
+            label1.Text = "CANTIDAD ->";
             // 
             // buttonPagar
             // 
@@ -155,6 +157,7 @@
             richTextBox1.Size = new Size(386, 166);
             richTextBox1.TabIndex = 25;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // richTextBox2
             // 
@@ -164,6 +167,7 @@
             richTextBox2.Size = new Size(371, 166);
             richTextBox2.TabIndex = 26;
             richTextBox2.Text = "";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
             // 
             // Formventa
             // 

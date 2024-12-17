@@ -56,7 +56,7 @@ namespace proyecto
                 Console.WriteLine($"Usuario: {usuario.cuenta}, Contraseña: {usuario.contraseña}");
             }
 
-            bd.Disconnect2();
+            bd.Disconnect();
         }
     }
 }

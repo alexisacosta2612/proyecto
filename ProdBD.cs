@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +8,7 @@ using System.Collections;
 using System.Runtime.Intrinsics.Arm;
 using Mysqlx.Crud;
 using Microsoft.VisualBasic;
+using System.Windows.Forms;
 using proyecto;
 
 namespace proyecto
@@ -18,13 +18,14 @@ namespace proyecto
 
 
         public MySqlConnection connection;
-        public MySqlConnection connection2;
+       public MySqlConnection connection2;
 
 
         public ProdBD()
         {
             this.Connect();
-            this.Connect2();
+            this.Connecti2();
+
         }
         public void Disconnect()
         {
@@ -35,7 +36,8 @@ namespace proyecto
             }
         }
 
-        public void Disconnect2()
+      
+  public void Disconnect2()
         {
             if (connection2 != null && connection2.State == System.Data.ConnectionState.Open)
             {
@@ -183,8 +185,6 @@ namespace proyecto
 
         }
 
-
-
         //-----------------------------------------------------METODOS AGREGADOS ------------------------------------------
         public string ObtenerNombreUsuario(string numeroCuenta)
         {
@@ -194,9 +194,9 @@ namespace proyecto
                 // Consulta SQL ajustada para usar "nombre completo" como el nombre de la columna
                 string query = "SELECT `nombre completo` FROM registros WHERE cuenta = @numeroCuenta";
 
-                Connect2(); // Asegúrate de conectar antes de ejecutar la consulta
+                Connecti2(); // Asegúrate de conectar antes de ejecutar la consulta
 
-                using (MySqlCommand command = new MySqlCommand(query, connection2))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     // Parámetro seguro para evitar inyecciones SQL
                     command.Parameters.AddWithValue("@numeroCuenta", numeroCuenta);
@@ -224,7 +224,7 @@ namespace proyecto
         public List<products> ObtenerProductos()
         {
             List<products> productos = new List<products>();
-            string query = "SELECT Id, Descripcion, Precio, Existencias FROM stock";
+            string query = "SELECT * FROM inventario";
 
             Connect();
             using (MySqlCommand comando = new MySqlCommand(query, connection))
@@ -233,13 +233,22 @@ namespace proyecto
                 {
                     while (reader.Read())
                     {
-                        productos.Add(new products
+                        try
                         {
-                            Id = reader.GetInt32(0),
-                            Descripcion = reader.GetString(1),
-                            Precio = (double)reader.GetDouble(2),
-                            Existencias = reader.GetInt32(3)
-                        });
+                            productos.Add(new products
+                            {
+                                Id = reader.GetInt32(0),
+                                Namepicture = reader.GetString(1),
+                                Productdescription = reader.GetString(2),
+                                Price = reader.GetInt32(3),
+                                Stock = reader.GetInt32(4)
+                            });
+                        }
+                        catch (FormatException ex)
+                        {
+                            // Handle the exception (e.g., log it, skip the record, etc.)
+                            Console.WriteLine($"Error al leer los datos de product: {ex.Message}");
+                        }
                     }
                 }
             }
@@ -254,10 +263,10 @@ namespace proyecto
             try
             {
                 // Consulta SQL para obtener los datos de la tabla `registro`
-                string query = "SELECT cuenta, contraseña FROM registros";
-                Connect2(); // Conecta a la base de datos
+                string query = "SELECT registros, contraseña FROM usuarios";
+                Connect(); // Conecta a la base de datos
 
-                using (MySqlCommand command = new MySqlCommand(query, connection2))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     MySqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -277,7 +286,7 @@ namespace proyecto
             }
             finally
             {
-                Disconnect2(); // Asegurarse de cerrar la conexión
+                Disconnect(); // Asegurarse de cerrar la conexión
             }
 
             return usuarios;
@@ -313,7 +322,7 @@ namespace proyecto
 
         public void Connect()
             {
-                string cadena = "Server=localhost; Database=products; User=root; Password=; SslMode=none;";
+                string cadena = "Server=localhost; Port=33065; Database=products; User=root; Password=; SslMode=none;";
                 try
                 {
                     connection = new MySqlConnection(cadena);
@@ -326,10 +335,10 @@ namespace proyecto
                 }
             }
 
-        public void Connect2()
+        public void Connecti2()
         {
             //Datos especiales para hacer la conexion a el servidor de datos
-            string cadena2 = "Server=localhost; Database=usuarios; User=root; Password=; SslMode=none;";
+            string cadena2 = "Server=localhost; Port=33065;Database=usuarios; User=root; Password=; SslMode=none;";
             try
             {
                 connection2 = new MySqlConnection(cadena2);

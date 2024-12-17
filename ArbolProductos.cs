@@ -57,7 +57,7 @@ namespace proyecto
                 MostrarEnOrdenRecursivo(nodo.Izquierdo, richTextBox); // Primero el menor
 
                 //Mostrar en richTextBox
-                richTextBox.AppendText($"ID={nodo.Producto.Id} Producto={nodo.Producto.Descripcion} Precio={nodo.Producto.Precio} Existencias={nodo.Producto.Existencias}\n");
+                richTextBox.AppendText($"ID={nodo.Producto.Id} Producto={nodo.Producto.Productdescription} Precio={nodo.Producto.Price} Existencias={nodo.Producto.Stock}\n");
 
                 MostrarEnOrdenRecursivo(nodo.Derecho, richTextBox); // Luego el mayor
             }

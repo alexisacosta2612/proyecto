@@ -50,7 +50,7 @@
             buttonActualizar.TabIndex = 1;
             buttonActualizar.Text = "Actualizar";
             buttonActualizar.UseVisualStyleBackColor = true;
-            buttonActualizar.Click += buttonActualizar_Click;
+           // buttonActualizar.Click += buttonActualizar_Click;
             // 
             // FormGrafica
             // 
@@ -61,7 +61,7 @@
             Controls.Add(button1);
             Name = "FormGrafica";
             Text = "FormGrafica";
-            Load += FormGrafica_Load;
+        //    Load += FormGrafica_Load;
             ResumeLayout(false);
         }
 

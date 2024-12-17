@@ -48,5 +48,7 @@ namespace proyecto
         public string Productdescription { get => productdescription; set => productdescription = value; }
         public int Price { get => price; set => price = value; }
         public int Stock { get => stock; set => stock = value; }
+        public int Cantidad { get; internal set; }
+
     }
 }

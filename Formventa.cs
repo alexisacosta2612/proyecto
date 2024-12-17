@@ -43,7 +43,7 @@ namespace proyecto
             // Mostrar el nombre del usuario al cargar el formulario
             Console.WriteLine($"Usuario autenticado: {cuenta}");
             ProdBD bd = new ProdBD(); // Crear instancia de conexión a la base de datos
-            _ = bd.ObtenerDatosGrafica();
+                                      // _ = bd.ObtenerDatosGrafica();
 
 
             bd.Disconnect();
@@ -64,7 +64,7 @@ namespace proyecto
             // Insertar productos en el árbol por precio
             foreach (var producto in datos)
             {
-                arbolPorPrecio.Insertar(producto, (p1, p2) => p1.Precio < p2.Precio); // Criterio: Precio Ascendente
+                arbolPorPrecio.Insertar(producto, (p1, p2) => p1.Price < p2.Price); // Criterio: Precio Ascendente
             }
 
             // Insertar productos en el árbol por ID
@@ -76,7 +76,7 @@ namespace proyecto
             MessageBox.Show("Árboles creados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Mostrar productos ordenados por precio en el RichTextBox
-            richTextBox1.Clear();
+           this.richTextBox1.Clear();
             arbolPorPrecio.MostrarEnOrden(richTextBox1);
 
             obj.Disconnect();
@@ -84,11 +84,28 @@ namespace proyecto
 
         private void btnQuitarDelCarrito_Click(object sender, EventArgs e)
         {
+            int idProducto = Convert.ToInt32(txtProd.Text); // ID ingresado por el usuario
+            int cantidad = Convert.ToInt32(txtCantidad.Text); // Cantidad ingresada por el usuario
 
+            Console.WriteLine($"Buscando producto con ID: {idProducto}");
+
+            // Buscar el producto por ID en el árbol
+            var producto = arbolPorId.BuscarPorId(idProducto);
+
+            if (producto != null)
+            {
+                producto.Cantidad = cantidad; // Actualizar la cantidad
+                productosSeleccionados.Add(producto); // Agregarlo a la lista de productos seleccionados
+                MessageBox.Show($"Producto {producto.Productdescription} agregado correctamente.");
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado.");
+            }
         }
         private void ActualizarTotal()
         {
-         
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -129,7 +146,7 @@ namespace proyecto
                     {
                         if (producto != null)
                         {
-                            documento.Add(new Paragraph($"- {producto.Descripcion}, Cantidad: {producto.Cantidad}, Precio: {producto.Precio}"));
+                            documento.Add(new Paragraph($"- {producto.Productdescription}, Cantidad: {producto.Stock}, Precio: {producto.Price}"));
                         }
                         else
                         {
@@ -138,7 +155,7 @@ namespace proyecto
                     }
 
                     // Calcular el total
-                    decimal total = (decimal)productosSeleccionados.Sum(p => p.Precio * p.Cantidad);
+                    decimal total = (decimal)productosSeleccionados.Sum(p => p.Price * p.Stock);
                     documento.Add(new Paragraph($"Total: {total}"));
 
                     documento.Close();
@@ -173,14 +190,34 @@ namespace proyecto
             decimal totalCompra = 0;
             foreach (var producto in productosSeleccionados)
             {
-                decimal subtotal = (decimal)(producto.Precio * producto.Cantidad);
+                decimal subtotal = (decimal)(producto.Price * producto.Stock);
                 totalCompra += subtotal;
-                notaCompra.AppendLine($"{producto.Descripcion} - {producto.Precio} x {producto.Cantidad} = {subtotal}");
+                notaCompra.AppendLine($"{producto.Productdescription} - {producto.Price} x {producto.Cantidad} = {subtotal}");
             }
 
             notaCompra.AppendLine($"Total: {totalCompra}");
             richTextBox2.Text = notaCompra.ToString();
             GenerarPDF(notaCompra.ToString());
+        }
+
+        private void txtProd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

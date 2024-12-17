@@ -67,7 +67,7 @@ namespace proyecto
                     }
                     else
                     {
-                        MessageBox.Show("Abriendo Form3...");
+                        MessageBox.Show("Abriendo Formventa...");
                         Formventa form3 = new Formventa(); // Formulario para otros usuarios
                         form3.Show();
                        // this.Hide(); // Ocultar este formulario

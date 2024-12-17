@@ -1,50 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\",
+  "WorkspaceRootPath": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\luis donaldo\\desktop\\pop def\\de git\\proyecto\\prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\luis donaldo\\desktop\\pop def\\de git\\proyecto\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\arbolproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:arbolproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\luis donaldo\\desktop\\pop def\\de git\\proyecto\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\luis donaldo\\desktop\\pop def\\de git\\proyecto\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\danna\\onedrive\\documentos\\programacion proyecto\\proyecto\\formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\luis donaldo\\desktop\\pop def\\de git\\proyecto\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,141 +38,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArbolProductos.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\ArbolProductos.cs",
-              "RelativeDocumentMoniker": "ArbolProductos.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\ArbolProductos.cs",
-              "RelativeToolTip": "ArbolProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "products.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\products.cs",
+              "RelativeDocumentMoniker": "products.cs",
+              "ToolTip": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\products.cs",
+              "RelativeToolTip": "products.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:13:05.797Z",
+              "WhenOpened": "2024-12-17T00:17:29.414Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdmonBD.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\AdmonBD.cs",
-              "RelativeDocumentMoniker": "AdmonBD.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\AdmonBD.cs",
-              "RelativeToolTip": "AdmonBD.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Form3.cs",
+              "RelativeToolTip": "Form3.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAIA3wDoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T08:05:37.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormGrafica.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\FormGrafica.cs",
-              "RelativeDocumentMoniker": "FormGrafica.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\FormGrafica.cs",
-              "RelativeToolTip": "FormGrafica.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:40:17.909Z",
+              "WhenOpened": "2024-12-16T23:05:17.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ProdBD.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\ProdBD.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\ProdBD.cs",
               "RelativeDocumentMoniker": "ProdBD.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\ProdBD.cs",
+              "ToolTip": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\ProdBD.cs",
               "RelativeToolTip": "ProdBD.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDYBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEIBAAAAAAAAAAA3wNAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:52:23.579Z",
+              "WhenOpened": "2024-12-16T22:36:28.164Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Formventa.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formventa.cs",
-              "RelativeDocumentMoniker": "Formventa.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formventa.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formventa.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:00:54.108Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Formventa.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formventa.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Formventa.cs",
               "RelativeDocumentMoniker": "Formventa.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formventa.cs",
+              "ToolTip": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Formventa.cs",
               "RelativeToolTip": "Formventa.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwBIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAiwK4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T06:48:17.632Z",
+              "WhenOpened": "2024-12-16T22:34:28.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Formmod.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formmod.cs",
-              "RelativeDocumentMoniker": "Formmod.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formmod.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formmod.cs [Dise\u00F1o]",
+              "DocumentIndex": 2,
+              "Title": "Formventa.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Formventa.cs",
+              "RelativeDocumentMoniker": "Formventa.cs",
+              "ToolTip": "C:\\Users\\Luis Donaldo\\Desktop\\pop def\\de git\\proyecto\\Formventa.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formventa.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:00:51.757Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Form3.cs",
-              "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Form3.cs",
-              "RelativeToolTip": "Form3.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAqwDEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:31:39.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "products.cs",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\products.cs",
-              "RelativeDocumentMoniker": "products.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\products.cs",
-              "RelativeToolTip": "products.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T08:07:47.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Formadmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formadmin.cs",
-              "RelativeDocumentMoniker": "Formadmin.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formadmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formadmin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:00:46.682Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Formadd.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formadd.cs",
-              "RelativeDocumentMoniker": "Formadd.cs",
-              "ToolTip": "C:\\Users\\danna\\OneDrive\\Documentos\\Programacion Proyecto\\proyecto\\Formadd.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formadd.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:00:41.775Z",
+              "WhenOpened": "2024-12-16T22:34:24.553Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
