@@ -49,6 +49,26 @@ namespace proyecto
         public int Price { get => price; set => price = value; }
         public int Stock { get => stock; set => stock = value; }
         public int Cantidad { get; internal set; }
+        public class Venta
+        {
+            public string Usuario { get; set; }
+            public DateTime Fecha { get; set; }
+            public List<products> ProductosVendidos { get; set; } // Usamos la clase products
+            public decimal Total { get; set; }
+            public Venta Siguiente { get; set; } // Referencia al siguiente nodo
+
+            public Venta(string usuario, DateTime fecha, List<products> productosVendidos, decimal total)
+            {
+                Usuario = usuario;
+                Fecha = fecha;
+                ProductosVendidos = productosVendidos;
+                Total = total;
+                Siguiente = null;
+            }
+        }
+
+        /////////
+        ///
 
     }
 }

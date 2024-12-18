@@ -48,7 +48,7 @@ namespace proyecto
                     cuentacpy = cuenta;
 
                     reader.Read(); // Lee la primera fila (ya que debería ser única)
-                    int usuarioId = reader.GetInt32("id"); // Obtén el ID del usuario desde la base de datos
+                    int usuarioId = reader.GetInt32("id"); 
 
                     AdmonBD.UsuarioActivoId = usuarioId;
                     MessageBox.Show($"Usuario activo ID: {AdmonBD.UsuarioActivoId}");
@@ -57,7 +57,7 @@ namespace proyecto
                     //  MessageBox.Show("Cuenta desde la base de datos: " + dbCuenta);
                     MessageBox.Show("Cuenta ingresada: " + cuenta);
 
-                    reader.Close(); // Cierra el reader después de leer los datos
+                    reader.Close(); // Cierra el reader despues de leer los datos
 
                     if (dbCuenta.Equals("goku@gmail.com", StringComparison.OrdinalIgnoreCase)) // Compara insensiblemente a mayúsculas
                     {
@@ -73,7 +73,7 @@ namespace proyecto
                     else
                     {
                         MessageBox.Show("Abriendo Formventa...");
-                        Formventa form3 = new Formventa(); // Formulario para otros usuarios
+                        Formventa form3 = new Formventa(); // Formulario para usuarios normales
                         form3.Show();
                         // this.Hide(); // Ocultar este formulario
                     }

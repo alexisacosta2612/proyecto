@@ -21,6 +21,7 @@ using iText.Layout.Element;
 using System.IO;
 using MySql.Data.MySqlClient;
 using proyecto__;
+using static proyecto.ProdBD;
 
 namespace proyecto
 {
@@ -183,6 +184,7 @@ namespace proyecto
             }
 
         }
+        private RegistroVentas registroVentas = new RegistroVentas();
 
         private void buttonPagar_Click(object sender, EventArgs e)
         {
@@ -218,7 +220,14 @@ namespace proyecto
                 notaCompra.AppendLine($"{producto.Productdescription} - {producto.Price} x {producto.Cantidad} = {total}");
             }
 
+            registroVentas.AgregarVenta(nombreUsuario, DateTime.Now, new List<products>(productosSeleccionados), totalCompra);
 
+            // Mostrar las ventas registradas en el RichTextBox
+            richTextBox2.Text = "Venta registrada exitosamente.\n";
+            registroVentas.MostrarVentas(richTextBox2);
+
+            // Limpiar los productos seleccionados
+            productosSeleccionados.Clear();
 
 
             notaCompra.AppendLine($"Total: {totalCompra}");
@@ -257,21 +266,43 @@ namespace proyecto
             labelfecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        
-            private void button4_Click(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
-                Formadmin formadmin = new Formadmin();
+            Formadmin formadmin = new Formadmin();
             formadmin.ShowDialog();
             this.Close();
         }
 
-        
+
 
         private void buttonfm2_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int idProducto = Convert.ToInt32(txtProd.Text); // ID ingresado por el usuario
+            int cantidad = Convert.ToInt32(txtCantidad.Text); // Cantidad ingresada por el usuario
+            
+
+            // Buscar el producto por ID en el árbol
+            var producto = arbolPorId.BuscarPorId(idProducto);
+
+            if (producto != null)
+            {
+                producto.Cantidad = cantidad; // Actualizar la cantidad
+                productosSeleccionados.Remove(producto); // Agregarlo a la lista de productos seleccionados
+                MessageBox.Show($"Producto {producto.Productdescription} producto eliminado.");
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado.");
+            }
+
         }
     }
 }

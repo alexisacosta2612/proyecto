@@ -105,7 +105,7 @@
             richTextBox1.Location = new Point(206, 86);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(318, 230);
+            richTextBox1.Size = new Size(420, 230);
             richTextBox1.TabIndex = 10;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -141,7 +141,7 @@
             richTextBox2.BackColor = Color.FromArgb(37, 42, 74);
             richTextBox2.BorderStyle = BorderStyle.None;
             richTextBox2.ForeColor = Color.Cyan;
-            richTextBox2.Location = new Point(575, 86);
+            richTextBox2.Location = new Point(665, 86);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(482, 230);
             richTextBox2.TabIndex = 35;
@@ -152,7 +152,7 @@
             button1morestock.FlatStyle = FlatStyle.Popup;
             button1morestock.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1morestock.ForeColor = SystemColors.ControlDark;
-            button1morestock.Location = new Point(575, 24);
+            button1morestock.Location = new Point(665, 24);
             button1morestock.Name = "button1morestock";
             button1morestock.Size = new Size(381, 34);
             button1morestock.TabIndex = 36;
@@ -264,7 +264,7 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Cyan;
-            button3.Location = new Point(575, 344);
+            button3.Location = new Point(665, 348);
             button3.Name = "button3";
             button3.Size = new Size(202, 47);
             button3.TabIndex = 38;
@@ -278,7 +278,7 @@
             textBoxtotalvntas.BackColor = Color.FromArgb(37, 42, 74);
             textBoxtotalvntas.BorderStyle = BorderStyle.None;
             textBoxtotalvntas.ForeColor = Color.Cyan;
-            textBoxtotalvntas.Location = new Point(809, 348);
+            textBoxtotalvntas.Location = new Point(888, 348);
             textBoxtotalvntas.Multiline = true;
             textBoxtotalvntas.Name = "textBoxtotalvntas";
             textBoxtotalvntas.PlaceholderText = "TOTAL DE VENTAS:";

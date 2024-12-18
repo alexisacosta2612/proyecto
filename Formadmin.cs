@@ -105,17 +105,17 @@ namespace proyecto
             ProdBD obj = new ProdBD();
             int totalProductos = obj.obtenerTotalProductos();  // Método que debes crear para obtener el número total de productos
 
-            // Si el número de productos es menor o igual a 6, no permitir la eliminación
+            // Si el numero de productos es menor o igual a 6, no permitir la eliminacion
             if (totalProductos <= 6)
             {
                 MessageBox.Show("No se puede eliminar el producto, ya que hay 6 o menos productos en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;  // Detener la eliminación
+                return;  // Detener la eliminacion
             }
 
             int id = Convert.ToInt32(textBoxiddelete.Text); // ID tomado del campo de texto
 
 
-            // Mostrar un cuadro de diálogo de confirmación
+            // Mostrar un cuadro de diálogo de confirmacion
             DialogResult resultado = MessageBox.Show(
                 "¿Estás seguro de que deseas eliminar este registro?",
                 "Confirmar eliminación",
@@ -134,7 +134,7 @@ namespace proyecto
             }
             else
             {
-                // El usuario canceló la acción
+                // El usuario cancelo la acción
                 MessageBox.Show("Eliminación cancelada.");
             }
         }

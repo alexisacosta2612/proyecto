@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\pc1\\Downloads\\proyecto-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -23,32 +11,28 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\registros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:registros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\extbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:extbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\datoos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:datoos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,51 +55,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "products.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\products.cs",
+              "RelativeDocumentMoniker": "products.cs",
+              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\products.cs",
+              "RelativeToolTip": "products.cs",
+              "ViewState": "AgIAACoAAAAAmZmZmZkZwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T00:41:25.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdBD.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ProdBD.cs",
+              "RelativeDocumentMoniker": "ProdBD.cs",
+              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ProdBD.cs",
+              "RelativeToolTip": "ProdBD.cs",
+              "ViewState": "AgIAALMBAAAAAAAAAAAiwN0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T00:38:27.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Formventa.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs",
+              "RelativeDocumentMoniker": "Formventa.cs",
+              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs",
+              "RelativeToolTip": "Formventa.cs",
+              "ViewState": "AgIAACEBAAAAMDMzMzMbwCoBAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T00:37:52.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Formventa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs",
               "RelativeDocumentMoniker": "Formventa.cs",
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs [Design]",
               "RelativeToolTip": "Formventa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T08:54:22.595Z",
+              "WhenOpened": "2024-12-18T00:37:37.482Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Formmod.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formmod.cs",
-              "RelativeDocumentMoniker": "Formmod.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formmod.cs [Design]",
-              "RelativeToolTip": "Formmod.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "Formadd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadd.cs",
+              "RelativeDocumentMoniker": "Formadd.cs",
+              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadd.cs [Design]",
+              "RelativeToolTip": "Formadd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:53:26.404Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Formadmin.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadmin.cs",
-              "RelativeDocumentMoniker": "Formadmin.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadmin.cs",
-              "RelativeToolTip": "Formadmin.cs",
-              "ViewState": "AgIAABkBAAAAAAAAAAAqwCkBAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:53:04.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "registros.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\registros.cs",
-              "RelativeDocumentMoniker": "registros.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\registros.cs",
-              "RelativeToolTip": "registros.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:36:16.514Z"
+              "WhenOpened": "2024-12-18T00:37:18.91Z"
             },
             {
               "$type": "Document",
@@ -126,44 +121,18 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:11:01.096Z"
+              "WhenOpened": "2024-12-18T00:37:13.974Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form2.cs",
-              "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAawGsAAAAAAAAAAAAAAA==",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:11:07.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Formadmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadmin.cs",
-              "RelativeDocumentMoniker": "Formadmin.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadmin.cs [Design]",
-              "RelativeToolTip": "Formadmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:52:58.704Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Formventa.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs",
-              "RelativeDocumentMoniker": "Formventa.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs",
-              "RelativeToolTip": "Formventa.cs",
-              "ViewState": "AgIAAL8AAACAmZmZmZkqwNIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T08:54:25.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T00:37:07.165Z"
             },
             {
               "$type": "Document",
@@ -173,45 +142,9 @@
               "RelativeDocumentMoniker": "AdmonBD.cs",
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\AdmonBD.cs",
               "RelativeToolTip": "AdmonBD.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAqwJwAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:20:21.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExtBD.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ExtBD.cs",
-              "RelativeDocumentMoniker": "ExtBD.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ExtBD.cs",
-              "RelativeToolTip": "ExtBD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T16:05:45.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProdBD.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ProdBD.cs",
-              "RelativeDocumentMoniker": "ProdBD.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\ProdBD.cs",
-              "RelativeToolTip": "ProdBD.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAvwCMAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:52:07.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "datoos.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Downloads\\proyecto-main\\datoos.cs",
-              "RelativeDocumentMoniker": "datoos.cs",
-              "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\datoos.cs",
-              "RelativeToolTip": "datoos.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T16:08:48.99Z"
+              "WhenOpened": "2024-12-17T23:46:23.52Z"
             }
           ]
         }

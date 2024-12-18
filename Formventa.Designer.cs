@@ -35,7 +35,6 @@
             lblfoto = new Label();
             imglfotos = new ImageList(components);
             buttonVer = new Button();
-            buttonAgregar = new Button();
             label1 = new Label();
             buttonPagar = new Button();
             label2 = new Label();
@@ -52,6 +51,11 @@
             timer1 = new System.Windows.Forms.Timer(components);
             panel3 = new Panel();
             label4 = new Label();
+            buttonAgregar = new Button();
+            button1 = new Button();
+            textBoxeliminar = new TextBox();
+            textBoxeliminarid = new TextBox();
+            panel = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -60,7 +64,7 @@
             // 
             // txtProd
             // 
-            txtProd.Location = new Point(375, 312);
+            txtProd.Location = new Point(363, 312);
             txtProd.Name = "txtProd";
             txtProd.Size = new Size(75, 23);
             txtProd.TabIndex = 18;
@@ -68,7 +72,7 @@
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(375, 341);
+            txtCantidad.Location = new Point(361, 341);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(75, 23);
             txtCantidad.TabIndex = 20;
@@ -78,7 +82,7 @@
             // 
             lblfoto.BackColor = Color.Transparent;
             lblfoto.ImageList = imglfotos;
-            lblfoto.Location = new Point(334, 315);
+            lblfoto.Location = new Point(320, 315);
             lblfoto.Name = "lblfoto";
             lblfoto.Size = new Size(35, 21);
             lblfoto.TabIndex = 12;
@@ -99,7 +103,7 @@
             // buttonVer
             // 
             buttonVer.BackColor = SystemColors.ControlDarkDark;
-            buttonVer.Location = new Point(216, 370);
+            buttonVer.Location = new Point(202, 370);
             buttonVer.Name = "buttonVer";
             buttonVer.Size = new Size(105, 23);
             buttonVer.TabIndex = 13;
@@ -107,22 +111,11 @@
             buttonVer.UseVisualStyleBackColor = false;
             buttonVer.Click += btnAgregarCarrito_Click;
             // 
-            // buttonAgregar
-            // 
-            buttonAgregar.BackColor = SystemColors.ControlDarkDark;
-            buttonAgregar.Location = new Point(355, 370);
-            buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(109, 23);
-            buttonAgregar.TabIndex = 14;
-            buttonAgregar.Text = "Agregar Producto";
-            buttonAgregar.UseVisualStyleBackColor = false;
-            buttonAgregar.Click += btnQuitarDelCarrito_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(286, 344);
+            label1.Location = new Point(272, 344);
             label1.Name = "label1";
             label1.Size = new Size(81, 15);
             label1.TabIndex = 21;
@@ -131,7 +124,7 @@
             // buttonPagar
             // 
             buttonPagar.BackColor = SystemColors.ControlDarkDark;
-            buttonPagar.Location = new Point(525, 372);
+            buttonPagar.Location = new Point(611, 370);
             buttonPagar.Name = "buttonPagar";
             buttonPagar.Size = new Size(75, 23);
             buttonPagar.TabIndex = 22;
@@ -289,12 +282,61 @@
             label4.TabIndex = 29;
             label4.Text = "clothesport";
             // 
+            // buttonAgregar
+            // 
+            buttonAgregar.BackColor = SystemColors.ControlDarkDark;
+            buttonAgregar.Location = new Point(341, 370);
+            buttonAgregar.Name = "buttonAgregar";
+            buttonAgregar.Size = new Size(109, 23);
+            buttonAgregar.TabIndex = 14;
+            buttonAgregar.Text = "Agregar Producto";
+            buttonAgregar.UseVisualStyleBackColor = false;
+            buttonAgregar.Click += btnQuitarDelCarrito_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ControlDarkDark;
+            button1.Location = new Point(468, 370);
+            button1.Name = "button1";
+            button1.Size = new Size(109, 23);
+            button1.TabIndex = 29;
+            button1.Text = "eliminar producto";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // textBoxeliminar
+            // 
+            textBoxeliminar.Location = new Point(468, 341);
+            textBoxeliminar.Name = "textBoxeliminar";
+            textBoxeliminar.PlaceholderText = "cantidad a eliminar";
+            textBoxeliminar.Size = new Size(109, 23);
+            textBoxeliminar.TabIndex = 30;
+            // 
+            // textBoxeliminarid
+            // 
+            textBoxeliminarid.Location = new Point(468, 312);
+            textBoxeliminarid.Name = "textBoxeliminarid";
+            textBoxeliminarid.PlaceholderText = "id a eliminar";
+            textBoxeliminarid.Size = new Size(100, 23);
+            textBoxeliminarid.TabIndex = 31;
+            // 
+            // panel
+            // 
+            panel.BackColor = Color.Red;
+            panel.Location = new Point(458, 291);
+            panel.Name = "panel";
+            panel.Size = new Size(129, 145);
+            panel.TabIndex = 32;
+            // 
             // Formventa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
             ClientSize = new Size(1053, 523);
+            Controls.Add(textBoxeliminarid);
+            Controls.Add(textBoxeliminar);
+            Controls.Add(button1);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(richTextBox2);
@@ -308,6 +350,7 @@
             Controls.Add(buttonVer);
             Controls.Add(txtCantidad);
             Controls.Add(lblfoto);
+            Controls.Add(panel);
             Name = "Formventa";
             Text = "Formventa";
             Load += Formventa_Load;
@@ -325,7 +368,6 @@
         private ImageList imglfotos;
         private Label lblfoto;
         private Button buttonVer;
-        private Button buttonAgregar;
         private TextBox txtProd;
         private TextBox txtCantidad;
         private Label label1;
@@ -344,5 +386,10 @@
         private Button buttonfm2;
         private Panel panel3;
         private Label label4;
+        private Button buttonAgregar;
+        private Button button1;
+        private TextBox textBoxeliminar;
+        private TextBox textBoxeliminarid;
+        private Panel panel;
     }
 }

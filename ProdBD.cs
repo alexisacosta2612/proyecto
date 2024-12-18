@@ -11,6 +11,7 @@ using Microsoft.VisualBasic;
 using System.Windows.Forms;
 using proyecto;
 using Microsoft.VisualBasic.Devices;
+using static proyecto.products;
 
 namespace proyecto
 {
@@ -426,10 +427,58 @@ namespace proyecto
                 MessageBox.Show($"Error al conectar con la base de datosss: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public class RegistroVentas
+        {
+            private Venta cabeza;
+
+            public RegistroVentas()
+            {
+                cabeza = null;
+            }
+
+            public void AgregarVenta(string usuario, DateTime fecha, List<products> productosVendidos, decimal total)
+            {
+                Venta nuevaVenta = new Venta(usuario, fecha, productosVendidos, total);
+
+                if (cabeza == null)
+                {
+                    cabeza = nuevaVenta;
+                }
+                else
+                {
+                    Venta actual = cabeza;
+                    while (actual.Siguiente != null)
+                    {
+                        actual = actual.Siguiente;
+                    }
+                    actual.Siguiente = nuevaVenta;
+                }
+            }
+
+            public void MostrarVentas(RichTextBox richTextBox)
+            {
+                Venta actual = cabeza;
+                richTextBox.Clear();
+
+                while (actual != null)
+                {
+                    richTextBox.AppendText($"Usuario: {actual.Usuario}\n");
+                    richTextBox.AppendText($"Fecha: {actual.Fecha}\n");
+                    richTextBox.AppendText("Productos Vendidos:\n");
+                    foreach (var producto in actual.ProductosVendidos)
+                    {
+                        richTextBox.AppendText($"  - ID: {producto.Id}, Descripción: {producto.Productdescription}, Cantidad: {producto.Cantidad}, Precio Unitario: {producto.Price}\n");
+                    }
+                    richTextBox.AppendText($"Total: {actual.Total}\n\n");
+
+                    actual = actual.Siguiente;
+                }
+            }
+        }
 
 
 
 
     }
-    }
+}
 
