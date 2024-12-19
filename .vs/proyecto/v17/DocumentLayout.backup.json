@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -35,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -51,7 +51,7 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:prodbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -59,7 +59,7 @@
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|c:\\users\\pc1\\downloads\\proyecto-main\\formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|C:\\Users\\pc1\\Downloads\\proyecto-main\\formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EC26A48-F8AA-4338-B991-B0F050637302}|proyecto.csproj|solutionrelative:formadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -116,8 +116,7 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:31:42.667Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T20:31:42.667Z"
             },
             {
               "$type": "Document",
@@ -129,8 +128,7 @@
               "RelativeToolTip": "Form2.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowCsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:32:14.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:32:14.612Z"
             },
             {
               "$type": "Document",
@@ -141,8 +139,7 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:29:20.186Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T20:29:20.186Z"
             },
             {
               "$type": "Document",
@@ -165,8 +162,7 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formventa.cs [Design]",
               "RelativeToolTip": "Formventa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:31:58.679Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T20:31:58.679Z"
             },
             {
               "$type": "Document",
@@ -178,8 +174,7 @@
               "RelativeToolTip": "Formadmin.cs",
               "ViewState": "AgIAAA0BAAAAAAAAAAAYwDUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:40:28.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:40:28.934Z"
             },
             {
               "$type": "Document",
@@ -191,8 +186,7 @@
               "RelativeToolTip": "products.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAmwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T22:10:51.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T22:10:51.709Z"
             },
             {
               "$type": "Document",
@@ -204,8 +198,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:31:00.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:31:00.735Z"
             },
             {
               "$type": "Document",
@@ -217,8 +210,7 @@
               "RelativeToolTip": "ProdBD.cs",
               "ViewState": "AgIAAL4AAAAAAAAAAAAAwNUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:40:49.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:40:49.911Z"
             },
             {
               "$type": "Document",
@@ -229,8 +221,7 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formmod.cs [Design]",
               "RelativeToolTip": "Formmod.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T21:14:21.62Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T21:14:21.62Z"
             },
             {
               "$type": "Document",
@@ -242,8 +233,7 @@
               "RelativeToolTip": "AdmonBD.cs",
               "ViewState": "AgIAAAMBAAAAAAAAAAAWwBgBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:32:33.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:32:33.375Z"
             },
             {
               "$type": "Document",
@@ -267,8 +257,7 @@
               "ToolTip": "C:\\Users\\pc1\\Downloads\\proyecto-main\\Formadd.cs [Design]",
               "RelativeToolTip": "Formadd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T21:13:02.01Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T21:13:02.01Z"
             }
           ]
         }
