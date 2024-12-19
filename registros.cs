@@ -13,6 +13,7 @@ namespace proyecto
         private string cuenta;
         private string contraseña;
         private int monto;
+        
 
         public registros()
         {
@@ -35,6 +36,7 @@ namespace proyecto
         public string Cuenta { get => cuenta; set => cuenta = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
         public int Monto { get => monto; set => monto = value; }
-        public string Cuentacpy { get; internal set; }
+        public string tipo_usuario { get; set; }  // Agregado para encapsular el nuevo atributo
+        //public string Cuentacpy { get; internal set; }
     }
 }

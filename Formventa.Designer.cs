@@ -43,11 +43,11 @@
             richTextBox2 = new RichTextBox();
             panel1 = new Panel();
             buttonfm2 = new Button();
-            button4 = new Button();
             panel2 = new Panel();
+            labelus = new Label();
+            pictureBox1 = new PictureBox();
             labelfecha = new Label();
             labelhora = new Label();
-            pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             panel3 = new Panel();
             label4 = new Label();
@@ -180,7 +180,6 @@
             // 
             panel1.BackColor = SystemColors.InactiveCaptionText;
             panel1.Controls.Add(buttonfm2);
-            panel1.Controls.Add(button4);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -201,50 +200,26 @@
             buttonfm2.UseVisualStyleBackColor = false;
             buttonfm2.Click += buttonfm2_Click;
             // 
-            // button4
-            // 
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.PaleGoldenrod;
-            button4.Location = new Point(6, 235);
-            button4.Name = "button4";
-            button4.Size = new Size(191, 53);
-            button4.TabIndex = 38;
-            button4.Text = "PANTALLA DE AMINISTRADOR";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // panel2
             // 
-            panel2.Controls.Add(labelfecha);
-            panel2.Controls.Add(labelhora);
+            panel2.Controls.Add(labelus);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(0, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 237);
             panel2.TabIndex = 28;
             // 
-            // labelfecha
+            // labelus
             // 
-            labelfecha.AutoSize = true;
-            labelfecha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelfecha.ForeColor = Color.Cyan;
-            labelfecha.Location = new Point(74, 163);
-            labelfecha.Name = "labelfecha";
-            labelfecha.Size = new Size(52, 21);
-            labelfecha.TabIndex = 28;
-            labelfecha.Text = "label4";
-            // 
-            // labelhora
-            // 
-            labelhora.AutoSize = true;
-            labelhora.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelhora.ForeColor = Color.Cyan;
-            labelhora.Location = new Point(74, 129);
-            labelhora.Name = "labelhora";
-            labelhora.Size = new Size(52, 21);
-            labelhora.TabIndex = 29;
-            labelhora.Text = "label5";
+            labelus.AutoSize = true;
+            labelus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelus.ForeColor = Color.Cyan;
+            labelus.Location = new Point(67, 143);
+            labelus.Name = "labelus";
+            labelus.Size = new Size(52, 21);
+            labelus.TabIndex = 33;
+            labelus.Text = "label5";
+            labelus.Click += labelus_Click;
             // 
             // pictureBox1
             // 
@@ -256,6 +231,28 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // labelfecha
+            // 
+            labelfecha.AutoSize = true;
+            labelfecha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelfecha.ForeColor = Color.Blue;
+            labelfecha.Location = new Point(970, 452);
+            labelfecha.Name = "labelfecha";
+            labelfecha.Size = new Size(52, 21);
+            labelfecha.TabIndex = 28;
+            labelfecha.Text = "label4";
+            // 
+            // labelhora
+            // 
+            labelhora.AutoSize = true;
+            labelhora.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelhora.ForeColor = Color.Blue;
+            labelhora.Location = new Point(970, 418);
+            labelhora.Name = "labelhora";
+            labelhora.Size = new Size(52, 21);
+            labelhora.TabIndex = 29;
+            labelhora.Text = "label5";
             // 
             // timer1
             // 
@@ -334,6 +331,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
             ClientSize = new Size(1053, 523);
+            Controls.Add(labelfecha);
+            Controls.Add(labelhora);
             Controls.Add(textBoxeliminarid);
             Controls.Add(textBoxeliminar);
             Controls.Add(button1);
@@ -382,7 +381,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label labelfecha;
         private Label labelhora;
-        private Button button4;
         private Button buttonfm2;
         private Panel panel3;
         private Label label4;
@@ -391,5 +389,6 @@
         private TextBox textBoxeliminar;
         private TextBox textBoxeliminarid;
         private Panel panel;
+        private Label labelus;
     }
 }

@@ -17,7 +17,8 @@ using System.Windows.Forms;
 using iText.Kernel.Pdf;
 using iText.Layout; // Para la clase Document
 
-using iText.Layout.Element;
+
+
 using System.IO;
 using MySql.Data.MySqlClient;
 using proyecto__;
@@ -36,17 +37,18 @@ namespace proyecto
         private ArbolProductos arbolPorId = new ArbolProductos();    // Árbol para búsqueda por ID
         public string cuentarec { get; set; }
 
-        public Formventa()
+        public Formventa(string nombre)
         {
             InitializeComponent();
+            labelus.Text = nombre;
         }
 
-        public Formventa(string cuenta)
-        {
-            InitializeComponent();
-            this.cuenta = cuenta;
+        /*  public Formventa(string cuenta)
+          {
+              InitializeComponent();
+              this.cuenta = cuenta;
 
-        }
+          }*/
         public void MostrarCuenta()
         {
             MessageBox.Show("Cuenta recibida en Formventa: " + cuentarec);
@@ -76,6 +78,8 @@ namespace proyecto
             // Obtener productos de la base de datos
             datos = obj.ObtenerProductos();
 
+
+
             // Insertar productos en el árbol por precio
             foreach (var producto in datos)
             {
@@ -88,7 +92,7 @@ namespace proyecto
                 arbolPorId.Insertar(producto, (p1, p2) => p1.Id < p2.Id); // Criterio: ID Ascendente
             }
 
-            MessageBox.Show("Árboles creados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // MessageBox.Show("Árboles creados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Mostrar productos ordenados por precio en el RichTextBox
             this.richTextBox1.Clear();
@@ -109,9 +113,16 @@ namespace proyecto
 
             if (producto != null)
             {
-                producto.Cantidad = cantidad; // Actualizar la cantidad
-                productosSeleccionados.Add(producto); // Agregarlo a la lista de productos seleccionados
-                MessageBox.Show($"Producto {producto.Productdescription} agregado correctamente.");
+                if (producto.Stock >= cantidad)
+                {
+                    producto.Cantidad = cantidad; // Actualizar la cantidad
+                    productosSeleccionados.Add(producto); // Agregarlo a la lista de productos seleccionados
+                    MessageBox.Show($"Producto {producto.Productdescription} agregado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("El producto no tiene suficientes existencias.");
+                }
             }
             else
             {
@@ -133,9 +144,8 @@ namespace proyecto
         }
 
         // Método para generar el PDF
-        private void GenerarPDF(string contenido)
+        private void GenerarPDF(string contenido, List<products> productosSeleccionados)
         {
-
             string rutaPDF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "compra.pdf");
 
             try
@@ -157,11 +167,12 @@ namespace proyecto
                     documento.Add(new Paragraph($"Fecha: {DateTime.Now}"));
                     documento.Add(new Paragraph("Productos adquiridos:"));
 
+                    // Mostrar los productos seleccionados
                     foreach (var producto in productosSeleccionados)
                     {
                         if (producto != null)
                         {
-                            documento.Add(new Paragraph($"- {producto.Productdescription}, Cantidad: {producto.Stock}, Precio: {producto.Price}"));
+                            documento.Add(new Paragraph($"- {producto.Productdescription}, Cantidad: {producto.Cantidad}, Precio: {producto.Price}"));
                         }
                         else
                         {
@@ -170,7 +181,7 @@ namespace proyecto
                     }
 
                     // Calcular el total
-                    decimal total = (decimal)productosSeleccionados.Sum(p => p.Price * p.Stock);
+                    decimal total = productosSeleccionados.Sum(p => p.Price * p.Cantidad);
                     documento.Add(new Paragraph($"Total: {total}"));
 
                     documento.Close();
@@ -180,45 +191,48 @@ namespace proyecto
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al generar PDF: {ex.Message}");
-
             }
-
         }
+
         private RegistroVentas registroVentas = new RegistroVentas();
 
         private void buttonPagar_Click(object sender, EventArgs e)
         {
-
+            // Crear una instancia de la clase BaseDatos para obtener el nombre del usuario
+            AdmonBD db = new AdmonBD();
+            ProdBD prodBD = new ProdBD();
             if (productosSeleccionados.Count == 0)
             {
                 MessageBox.Show("No has agregado productos.");
                 return;
             }
 
-            // Crear una instancia de la clase BaseDatos para obtener el nombre del usuario
-            AdmonBD db = new AdmonBD();
-            ProdBD prodBD = new ProdBD();
-            string nombreUsuario = db.ObtenerNombreUsuario(cuenta); // Aquí "cuenta" es el numero de cuenta actual
 
+
+            string nombreUsuario = labelus.Text;  // Aquí "nombre" es el numero de cuenta con el que se autenticó el usuario
 
             StringBuilder notaCompra = new StringBuilder();
             notaCompra.AppendLine($"Usuario: {nombreUsuario}");
             notaCompra.AppendLine($"Fecha: {DateTime.Now}");
             notaCompra.AppendLine("Detalle de la compra:");
+            decimal totalCompraDecimal = 0;  // Para mantener el total como decimal si se requiere precisión
+            int totalCompra = 0;  // Variable totalCompra convertida a int para el monto final
 
-            decimal totalCompra = 0;
+           
             foreach (var producto in productosSeleccionados)
             {
                 decimal subtotal = (decimal)(producto.Price * producto.Cantidad);
-                decimal total = subtotal * 0.6m;
-                totalCompra += total;
-
-
-
+                decimal impuesto = subtotal * 0.06m; 
+                decimal total = subtotal + impuesto;
+                totalCompraDecimal += total;
+                totalCompra = (int)totalCompraDecimal;
 
                 prodBD.Actualizarstock(producto.Id, producto.Cantidad);
+                
                 notaCompra.AppendLine($"{producto.Productdescription} - {producto.Price} x {producto.Cantidad} = {total}");
+             //   db.ActualizarVENTAS(nombreUsuario, totalCompra);  // Suponiendo que 'total' es el monto a actualizar
             }
+        //    db.ActualizarVENTAS(nombreUsuario, totalCompra);
 
             registroVentas.AgregarVenta(nombreUsuario, DateTime.Now, new List<products>(productosSeleccionados), totalCompra);
 
@@ -227,12 +241,12 @@ namespace proyecto
             registroVentas.MostrarVentas(richTextBox2);
 
             // Limpiar los productos seleccionados
-            productosSeleccionados.Clear();
-
+            // productosSeleccionados.Clear();
 
             notaCompra.AppendLine($"Total: {totalCompra}");
             richTextBox2.Text = notaCompra.ToString();
-            GenerarPDF(notaCompra.ToString());
+            GenerarPDF(notaCompra.ToString(), productosSeleccionados);
+            productosSeleccionados.Clear();
         }
 
         private void txtProd_TextChanged(object sender, EventArgs e)
@@ -267,12 +281,12 @@ namespace proyecto
         }
 
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Formadmin formadmin = new Formadmin();
-            formadmin.ShowDialog();
-            this.Close();
-        }
+        /*  private void button4_Click(object sender, EventArgs e)
+          {
+              Formadmin formadmin = new Formadmin();
+              formadmin.ShowDialog();
+              this.Close();
+          }*/
 
 
 
@@ -287,7 +301,7 @@ namespace proyecto
         {
             int idProducto = Convert.ToInt32(txtProd.Text); // ID ingresado por el usuario
             int cantidad = Convert.ToInt32(txtCantidad.Text); // Cantidad ingresada por el usuario
-            
+
 
             // Buscar el producto por ID en el árbol
             var producto = arbolPorId.BuscarPorId(idProducto);
@@ -302,6 +316,20 @@ namespace proyecto
             {
                 MessageBox.Show("Producto no encontrado.");
             }
+
+        }
+
+        private void labelus_Click(object sender, EventArgs e)
+        {
+
+        }
+        private int ObtenerIdProducto()
+        {
+            return Convert.ToInt32(txtProd.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
     }

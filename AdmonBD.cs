@@ -10,19 +10,23 @@ using System.Runtime.Intrinsics.Arm;
 using Mysqlx.Crud;
 using Microsoft.VisualBasic;
 using proyecto;
+using System.Data;
+using System.Security.Cryptography;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 namespace proyecto__
 {
     public class AdmonBD
     {
 
-        public MySqlConnection connection;
+       public MySqlConnection connection;
+       // private MySqlConnection connection = new MySqlConnection("server=localhost;database=usuarios;uid=root;pwd=tupassword;");
+
 
         public AdmonBD()
         {
             this.Connect();
         }
-        public int usuarioact { get; set; }
-        public static int UsuarioActivoId { get; set; } = 0; // Almacena el ID del usuario activo
+      
 
         public void Disconnect()
         {
@@ -79,9 +83,53 @@ namespace proyecto__
             return data;
         }
         /// <summary>
-        /// ////////////////////////////////////////////////////////////
+        /// ////////////////////////////////////////////////////////////***********8888/////////////////////
         /// </summary>
         /// 
+        public void logear(string cuenta, string contraseña)
+        {
+            try
+            {
+                MySqlCommand command = new MySqlCommand("SELECT tipo_usuario, nombre FROM usuarios WHERE cuenta = @cuenta AND contraseña = @contraseña", connection);
+                command.Parameters.AddWithValue("@cuenta", cuenta);
+                command.Parameters.AddWithValue("@contraseña", contraseña);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string nombre = reader["nombre"]?.ToString() ?? string.Empty;
+                    string tipoUsuario = reader["tipo_usuario"]?.ToString() ?? string.Empty;
+                    MessageBox.Show("Bienvenido");
+
+                    if (tipoUsuario == "admin")
+                    {
+                        new Formadmin(nombre).Show();
+                    }
+                    else if (tipoUsuario == "usuario")
+                    {
+                        new Formventa(nombre).Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar usuario: " + ex.Message);
+            }
+            finally
+            {
+                this.Disconnect();
+            }
+        }
+
+
+
+
+
         public string ObtenerCorreoUsuario(string cuenta)
         {
             string correo = string.Empty;
@@ -148,28 +196,12 @@ namespace proyecto__
 
         }
         //...........................
-        public string ObtenerNombreUsuario(string numeroCuenta)
+        public string ObtenerNombreUsuario(string nombre)
         {
             string nombreUsuario = "Desconocido"; // Valor predeterminado en caso de no encontrar el usuario
             try
             {
-                // Consulta SQL ajustada para usar "nombre completo" como el nombre de la columna
-                string query = "SELECT nombre FROM usuarios WHERE cuenta = @cuenta";
-
-                Connect(); // Asegúrate de conectar antes de ejecutar la consulta
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    // Parámetro seguro para evitar inyecciones SQL
-                    command.Parameters.AddWithValue("@cuenta", numeroCuenta);
-
-                    // Ejecutar la consulta
-                    object resultado = command.ExecuteScalar();
-                    if (resultado != null)
-                    {
-                        nombreUsuario = resultado.ToString(); // Convertir el resultado al nombre del usuario
-                    }
-                }
+                
             }
             catch (Exception ex)
             {
@@ -197,6 +229,120 @@ namespace proyecto__
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al conectar con la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public string ObtenerTipoUsuarioPorNombre(string nombre)
+        {
+            string tipoUsuario = string.Empty; // Valor por defecto si no se encuentra el tipo de usuario.
+
+            try
+            {
+                // Consulta para obtener el tipo de usuario basado en el nombre proporcionado.
+                string query = "SELECT tipo_usuario FROM usuarios WHERE nombre = @nombre";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", nombre);
+
+                    // Ejecutar la consulta y leer el resultado
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())  // Si encuentra el registro
+                    {
+                        tipoUsuario = reader["tipo_usuario"].ToString();  // Obtener el tipo de usuario.
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre de usuario no encontrado.");
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el tipo de usuario: {ex.Message}");
+            }
+
+            return tipoUsuario;  // Retorna el tipo de usuario.
+        }
+        /// <summary>
+        /// //COMPRA USUARIO
+        /// 
+        /// </summary>
+        public void ActualizarVENTAS(string nombre , int Monto)
+        {
+            try
+            {
+                Connect();
+                string query = "UPDATE usuario SET monto = monto + @monto WHERE nombre = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@monto", Monto); // Agregar el monto a la base de datos
+                    cmd.Parameters.AddWithValue("@nombre", nombre);       // Identificador del usuarioo
+
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar el monto: {ex.Message}");
+            }
+        }
+        public void RealizarCompra(string cuenta, int montoCompra)
+        {
+            try
+            {
+                // Conectar a la base de datos
+                Connect();
+
+                
+                using (var transaction = connection.BeginTransaction())
+                {
+                    // Obtener el monto actual del usuario
+                    string querySelect = "SELECT monto FROM usuarios WHERE nombre = @nombre";
+                    using (MySqlCommand commandSelect = new MySqlCommand(querySelect, connection, transaction))
+                    {
+                        commandSelect.Parameters.AddWithValue("@cuenta", cuenta);
+                        object result = commandSelect.ExecuteScalar();
+                        if (result == null)
+                        {
+                            MessageBox.Show("Usuario no encontrado.");
+                            return;
+                        }
+
+                        int montoActual = Convert.ToInt32(result);
+
+                        // Calcular el nuevo monto
+                        int nuevoMonto = montoActual - montoCompra;
+                        if (nuevoMonto < 0)
+                        {
+                            MessageBox.Show("Fondos insuficientes.");
+                            return;
+                        }
+
+                        // Actualizar el monto del usuario
+                        string queryUpdate = "UPDATE usuarios SET monto = @nuevoMonto WHERE cuenta = @cuenta";
+                        using (MySqlCommand commandUpdate = new MySqlCommand(queryUpdate, connection, transaction))
+                        {
+                            commandUpdate.Parameters.AddWithValue("@nuevoMonto", nuevoMonto);
+                            commandUpdate.Parameters.AddWithValue("@cuenta", cuenta);
+                            commandUpdate.ExecuteNonQuery();
+                        }
+
+                        // Confirmar la transacción
+                        transaction.Commit();
+                        MessageBox.Show("Compra realizada exitosamente.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al realizar la compra: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
             }
         }
     }

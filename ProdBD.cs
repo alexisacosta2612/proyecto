@@ -44,7 +44,7 @@ namespace proyecto
             if (connection2 != null && connection2.State == System.Data.ConnectionState.Open)
             {
                 connection2.Close();
-                MessageBox.Show("Conexión cerrada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Conexion cerrada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace proyecto
         /// <returns></returns>
         /// 
         public int obtenerStock(int id)
-{
+                          {
     int stock = 0;
     try
     {
@@ -98,6 +98,31 @@ namespace proyecto
             return total;
         }
 
+        public int getstock(int id)
+        {
+            int stock = 0;
+            try
+            {
+                string query = "SELECT stock FROM inventario WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        stock = reader.GetInt32("stock");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el stock del producto: {ex.Message}");
+            }
+            return stock;
+        }/// <summary>
+         /// ///////////////////////METODO CONSULTAR////////////////////////
+         /// </summary>
+         /// <returns></returns>
         public List<products> consult()
         {
             List<products> data = new List<products>();
@@ -143,7 +168,10 @@ namespace proyecto
             }
             return data;
         }
-        //...
+        /// <summary>
+        /// /////////////////////////////////////METODO ACTUALIZAR////////////////////////////////////////
+        /// </summary>
+      
         public void actualizar(int Id, string Namepicture, string Productdescription, int Price, int Stock)
         {
             try
@@ -163,7 +191,7 @@ namespace proyecto
         /// <summary>
         /// ///////
         /// </summary>
-        //////////////////////////////////////////////////
+        //////////////////////////////////////////////////ACTUALIZAR STOCK/////////////////////////////////////////
         ///
         public void Actualizarstock(int idproduct,int cantidadcomprada)
         {
@@ -184,6 +212,10 @@ namespace proyecto
                 MessageBox.Show($"Error al actualizar el stock: {ex.Message}");
             }
         }
+        /// <summary>
+        /// //////////////////////////////ELIMINAR////////////////////////////////////////
+        /// </summary>
+        
         public void eliminar(int idp)
         {
             string query = "";
@@ -199,7 +231,10 @@ namespace proyecto
                 MessageBox.Show(query + "\nError " + ex.Message);
                 this.Disconnect();
             }
-        }
+        }/// <summary>
+         /// ////////////////////////////INSERTAR////////////////////////////////////////
+         /// </summary>
+        
         public void insertar(int Idd, string Namepicturee, string Productdescriptionn, int Pricee, int Stockk)
         {
             string query = "";
@@ -263,7 +298,7 @@ namespace proyecto
         }
 
         //-----------------------------------------------------METODOS AGREGADOS ------------------------------------------
-      /*  public string ObtenerNombreUsuario(string numeroCuenta)
+        public string ObtenerNombreUsuario(string numeroCuenta)
         {
             string nombreUsuario = "Desconocido"; // Valor predeterminado en caso de no encontrar el usuario
             try
@@ -296,7 +331,8 @@ namespace proyecto
             }
 
             return nombreUsuario;
-        */
+        }
+        
 
         public List<products> ObtenerProductos()
         {

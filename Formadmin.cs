@@ -18,9 +18,11 @@ namespace proyecto
     {
         List<registros> dato;
         List<products> data;
-        public Formadmin()
+        public Formadmin(string nombre)
         {
             InitializeComponent();
+            labeladmin.Text = nombre;
+
         }
 
         public void limpiar()
@@ -35,14 +37,14 @@ namespace proyecto
 
         }
         private string correoUsuario;
-        public Formadmin(string correo)
-        {
-            InitializeComponent();
-            correoUsuario = correo;
+        /* public Formadmin(string correo)
+         {
+             InitializeComponent();
+             correoUsuario = correo;
 
-            // Ahora puedes usar correoUsuario como clave o hacer las validaciones necesarias
-            MessageBox.Show($"Bienvenido al panel de administrador. Correo: {correoUsuario}");
-        }
+             // Ahora puedes usar correoUsuario como clave o hacer las validaciones necesarias
+             MessageBox.Show($"Bienvenido al panel de administrador. Correo: {correoUsuario}");
+         }*/
 
         private void buttonRefrescar_Click(object sender, EventArgs e)
         {
@@ -104,7 +106,7 @@ namespace proyecto
         {
             ProdBD obj = new ProdBD();
             int totalProductos = obj.obtenerTotalProductos();  // Método que debes crear para obtener el número total de productos
-
+            
             // Si el numero de productos es menor o igual a 6, no permitir la eliminacion
             if (totalProductos <= 6)
             {
@@ -115,10 +117,13 @@ namespace proyecto
             int id = Convert.ToInt32(textBoxiddelete.Text); // ID tomado del campo de texto
 
 
+
+
             // Mostrar un cuadro de diálogo de confirmacion
             DialogResult resultado = MessageBox.Show(
                 "¿Estás seguro de que deseas eliminar este registro?",
                 "Confirmar eliminación",
+               
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
             );
@@ -180,15 +185,31 @@ namespace proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // if (labeladmin.Text == "admin")
+            //{
             Formadd formadd = new Formadd();
             formadd.ShowDialog();
-
+            //}
+            //else
+            //{
+            //  MessageBox.Show("No tienes permisos para agregar productos.");
+            //}
         }
 
         private void buttonMODIFICAR_Click(object sender, EventArgs e)
         {
+
+
+            //if (labeladmin.Text == "invitado" )
+            //{
             Formmod formmod = new Formmod();
             formmod.ShowDialog();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No tienes permisos para modificar productos.");
+            // }
+
 
         }
 
@@ -236,31 +257,7 @@ namespace proyecto
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AdmonBD admonBD = new AdmonBD();
 
-            int usuarioact = admonBD.usuarioact;
-            registros usuarioactivo = admonBD.const_reguser(usuarioact);
-
-            if (usuarioactivo != null)
-            {
-                MessageBox.Show($"Usuario Activo:\n" +
-                       //   $"ID: {usuarioactivo.Id}\n" +
-                       $"Nombre: {usuarioactivo.Name}",
-                       // $"Cuenta: {usuarioactivo.Cuenta}\n" +
-                       //  $"Monto: {usuarioactivo.Monto}",
-                       "Usuario Act",
-                       MessageBoxButtons.OK,
-                       MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se encontró un usuario activo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            admonBD.Disconnect();
-
-        }
         private void GuardarCompra()
         {
             try
@@ -282,15 +279,11 @@ namespace proyecto
         private decimal totalVentas = 0;
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Mostrar el total acumulado en el TextBox correspondiente
-                textBoxtotalvntas.Text = $"${totalVentas:0.00}";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al calcular el total de ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //BUTTON TOTAL DE VENTAS
+            ProdBD prodBD = new ProdBD();
+            prodBD.consult();
+            List<products> productos = prodBD.consult();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -299,16 +292,18 @@ namespace proyecto
             labelfecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Formventa fmventa = new Formventa();
-            fmventa.ShowDialog();
-            this.Hide();
-        }
+        /*  private void button4_Click(object sender, EventArgs e)
+          {
+              Formventa fmventa = new Formventa();
+              fmventa.ShowDialog();
+              this.Hide();
+          }*/
 
         private void textBoxtotalvntas_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

@@ -38,11 +38,9 @@
             richTextBox2 = new RichTextBox();
             button1morestock = new Button();
             panel1 = new Panel();
-            button4 = new Button();
+            labeladmin = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            button2 = new Button();
-            panel2 = new Panel();
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
             button3 = new Button();
@@ -163,13 +161,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(24, 30, 54);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(labeladmin);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(buttonMODIFICAR);
             panel1.Controls.Add(textBoxiddelete);
-            panel1.Controls.Add(panel2);
             panel1.Controls.Add(buttondelete);
             panel1.Controls.Add(buttonAGREGAR);
             panel1.Location = new Point(0, 0);
@@ -177,25 +173,22 @@
             panel1.Size = new Size(200, 516);
             panel1.TabIndex = 37;
             // 
-            // button4
+            // labeladmin
             // 
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.PaleGoldenrod;
-            button4.Location = new Point(0, 421);
-            button4.Name = "button4";
-            button4.Size = new Size(191, 53);
-            button4.TabIndex = 37;
-            button4.Text = "PANTALLA DE VENTAS";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            labeladmin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labeladmin.ForeColor = Color.Cyan;
+            labeladmin.Location = new Point(3, 95);
+            labeladmin.Name = "labeladmin";
+            labeladmin.Size = new Size(191, 54);
+            labeladmin.TabIndex = 38;
+            labeladmin.Text = "label1";
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Cyan;
-            button1.Location = new Point(3, 362);
+            button1.Location = new Point(3, 429);
             button1.Name = "button1";
             button1.Size = new Size(191, 53);
             button1.TabIndex = 36;
@@ -214,29 +207,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click_1;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(24, 30, 54);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(24, 30, 54);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Cyan;
-            button2.Location = new Point(50, 98);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 35);
-            button2.TabIndex = 1;
-            button2.Text = "USER";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(24, 30, 54);
-            panel2.Location = new Point(12, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(171, 146);
-            panel2.TabIndex = 35;
             // 
             // panel3
             // 
@@ -351,7 +321,6 @@
         private RichTextBox richTextBox2;
         private Button button1morestock;
         private Panel panel1;
-        private Button button2;
         private PictureBox pictureBox1;
         private Panel panel2;
         private Button button1;
@@ -362,6 +331,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label labelhora;
         private Label labelfecha;
-        private Button button4;
+        private Label labeladmin;
     }
 }

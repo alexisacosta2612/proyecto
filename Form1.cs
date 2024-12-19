@@ -9,10 +9,10 @@ namespace proyecto
 
         private void buttonfrom2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+                Form2 f2 = new Form2();
             this.Hide();
             f2.ShowDialog();
-            this.Show();
+           // this.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

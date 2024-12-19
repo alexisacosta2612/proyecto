@@ -196,3 +196,4 @@ C:\Users\pc1\Downloads\proyecto-main\obj\Debug\net8.0-windows\proyecto.genruntim
 C:\Users\pc1\Downloads\proyecto-main\obj\Debug\net8.0-windows\ref\proyecto.dll
 C:\Users\pc1\Downloads\proyecto-main\obj\Debug\net8.0-windows\proyecto.Formaux.resources
 C:\Users\pc1\Downloads\proyecto-main\obj\Debug\net8.0-windows\proyecto.sourcelink.json
+C:\Users\pc1\Downloads\proyecto-main\bin\Debug\net8.0-windows\itextsharp.dll
